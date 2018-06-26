@@ -1,0 +1,41 @@
+site_name: Bitprim
+site_url: http://www.bitprim.org
+site_description: Bitprim
+site_author: Bitprim Team
+
+repo_url: https://github.com/mkdocs/mkdocs/
+edit_uri: ""
+
+pages:
+    - Home: index.md
+    - User Guide:
+        - Introduction: user_guide/introduction.md 
+        - Installation: user_guide/installation.md
+        - RPC: user_guide/rpc.md
+        - Release Notes: user_guide/releases_notes.md 
+    - Developer Guide:
+        - Introduction: developer_guide/introduction.md
+        - .Net: 
+            - Introduction: developer_guide/dotnet/dotnet-Interface.md
+            - Reference: developer_guide/dotnet/dotnet-interface-details.md
+        - C:
+            - Introduction: developer_guide/c/C-interface.md
+            - Reference: developer_guide/c/api.md
+        - C++: 
+            - Introduction: developer_guide/c++/C---interface.md
+        - Python: 
+            - Introduction: developer_guide/python/Python-interface.md
+            - Reference: developer_guide/python/Python-interface-details.md
+        - Go:
+            - Introduction: developer_guide/go/Go-interface.md
+    - About:
+        - Team: team.md
+        
+copyright: Copyright &copy; 2018 Bitprim
+
+markdown_extensions:
+    - toc:
+        permalink: #
+
+plugins:
+    - search    
