@@ -31,7 +31,7 @@ pages:
     - About:
         - Team: team.md
         
-copyright: Copyright &copy; 2018 Bitprim
+copyright: Copyright &copy; 2018 Bitprim - info@bitprim.org
 
 markdown_extensions:
     - toc:
