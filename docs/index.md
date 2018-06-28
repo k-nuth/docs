@@ -2,8 +2,6 @@
 
 ##### "Bringing decentralized solutions to everyday life"
 
-##### 
-
 ## Welcome to Bitprim
 
 Bitprim is a multi-coin developing platform, working with multi-languages programming compatible with the Satoshi Client.
@@ -26,3 +24,4 @@ The platform includes:
 * C Interface
 * C++ Interface
 * Interfaces for Go, Python, Node, C\# and others
+* Full REST API implementation, compatible with insight API
