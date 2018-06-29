@@ -3,8 +3,11 @@ site_url: http://www.bitprim.org
 site_description: Bitprim
 site_author: Bitprim Team
 
-repo_url: https://github.com/mkdocs/mkdocs/
+repo_url: https://github.com/bitprim/bitprim-docs/
 edit_uri: ""
+
+theme:
+    name: flatly
 
 pages:
     - Home: index.md
@@ -36,7 +39,8 @@ copyright: Copyright &copy; 2018 Bitprim - info@bitprim.org
 
 markdown_extensions:
     - toc:
-        permalink: #
+        permalink: ☍
+    - extra
 
 plugins:
     - search    
