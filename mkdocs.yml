@@ -34,9 +34,5 @@ pages:
         
 copyright: Copyright &copy; 2018 Bitprim - info@bitprim.org
 
-markdown_extensions:
-    - toc:
-        permalink: #
-
 plugins:
     - search    
