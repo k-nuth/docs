@@ -1,4 +1,4 @@
-##### ![Bitprim](assets/bitprim_logo_orange.png)
+![Bitprim](assets/bitprim_logo_orange.png)
 
 ##### "Bringing decentralized solutions to everyday life"
 
