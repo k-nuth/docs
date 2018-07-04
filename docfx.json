@@ -1,0 +1,54 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "bitprim-bch/*.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "bitprim-cs"
+        }
+      ],
+      "dest": "obj/bitprim-cs",
+      "filter": "filterConfig.yml" 
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.yml" ],
+        "src": "obj/bitprim-cs",
+        "dest": "bitprim-cs"
+      },
+      {
+        "files": ["content/**/*.md" , 
+                  "*.md", 
+                  "content/developer_guide/toc.yml",  
+                  "toc.yml", 
+                  "restapi/**" 
+                ]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["content/assets/**", "content/developer_guide/**/assets/**"]
+      }
+    ],
+    "overwrite": "specs/*.md",
+    "globalMetadata": {
+      "_appTitle": "Bitprim Documentation Site",
+      "_enableSearch": true, 
+      "_appFooter": "<span>Copyright © 2018 Bitprim</span>",
+      "_appLogoPath": "content/assets/b.png",
+      "_gitContribute": {
+        "branch": "dev"
+      }
+    },
+    "template": [
+      "default",
+      "templates/bitprim-template"
+    ],
+    "markdownEngineName": "markdig",
+    "dest": "_site",
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
+  }
+}

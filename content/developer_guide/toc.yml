@@ -1,0 +1,12 @@
+﻿- name: Introduction
+  href: introduction.md
+- name: Rest Api
+  href: restapi/introduction.md
+  items:
+    - name: Reference
+      href: ../../restapi/toc.md  
+- name: C#
+  href: dotnet/dotnet-interface.md
+  items: 
+    - name: Reference
+      href: ../../obj/bitprim-cs/toc.yml

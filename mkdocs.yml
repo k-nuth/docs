@@ -6,6 +6,8 @@ site_author: Bitprim Team
 repo_url: https://github.com/bitprim/bitprim-docs/
 edit_uri: ""
 
+docs_dir: content
+
 theme:
     name: flatly
 
@@ -21,15 +23,15 @@ pages:
         - Rest Api: developer_guide/restapi/introduction.md
         - .Net: 
             - Introduction: developer_guide/dotnet/dotnet-Interface.md
-            - Reference: developer_guide/dotnet/dotnet-interface-details.md
+            
         - C:
             - Introduction: developer_guide/c/C-interface.md
-            - Reference: developer_guide/c/api.md
+            
         - C++: 
             - Introduction: developer_guide/c++/C---interface.md
         - Python: 
             - Introduction: developer_guide/python/Python-interface.md
-            - Reference: developer_guide/python/Python-interface-details.md
+            
         - Go:
             - Introduction: developer_guide/go/Go-interface.md
     - About:

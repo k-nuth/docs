@@ -1,0 +1,4 @@
+apiRules:
+  - exclude:
+      uidRegex: ^Bitprim\.Logging
+      type: Namespace 

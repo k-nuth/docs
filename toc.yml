@@ -1,0 +1,8 @@
+﻿- name: Home
+  href: index.md
+- name: User Guide
+  href: content/user_guide/
+  homepage: content/user_guide/introduction.md
+- name: Developer Guide
+  href: content/developer_guide/
+  homepage: content/developer_guide/introduction.md
