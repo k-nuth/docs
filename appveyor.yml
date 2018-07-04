@@ -48,6 +48,6 @@ install:
   - cinst docfx
 
 build_script:
-  - docfx build
+  - docfx
 
 test: off
