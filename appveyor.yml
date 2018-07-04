@@ -1,0 +1,51 @@
+#
+# Copyright (c) 2017-2018 Bitprim Inc.
+#
+# This file is part of Bitprim.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+build: off
+
+branches:
+  only:
+    - master
+    - dev
+    - /^v\d+\.\d+\.\d+$/
+    - /^release-\d+\.\d+\.\d+$/
+    - /^feature-ci-.+$/
+    - /^feature_ci_.+$/
+
+platform:
+  - x64
+  
+configuration:
+- Release
+
+environment:
+    
+    VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
+
+    matrix:
+        - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+
+install:
+  - cinst docfx
+
+build_script:
+  - docfx build
+
+test: off
