@@ -54,7 +54,7 @@ build_script:
 
 on_success:
   
-  - ps: >-
+  - ps: |
         git clone https://github.com/bitprim/bitprim.github.io.git
         cd _site
         xcopy *.* C:/projects/bitprim-docs/bitprim.github.io/docfx/ /s /e /y
