@@ -35,7 +35,9 @@ configuration:
 - Release
 
 environment:
-    
+    access_token:
+      secure: ErUbaWTVjfp8LLH3y6Zh+20sXGFrmIyIb2xMPDsRwtPDSoTCCmFmD6zEJ1b2R6NE
+
     VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
 
     matrix:
@@ -49,5 +51,17 @@ install:
 
 build_script:
   - docfx
+
+on_success:
+  
+  - ps: >-
+        git clone https://github.com/bitprim/bitprim.github.io.git
+        cd _site
+        xcopy *.* C:/projects/bitprim-docs/bitprim.github.io/docfx/ /s /e /y
+        cd ../bitprim.github.io
+        git add .
+        git commit -m "Updated documentation site"
+        git remote add origin-commit https://$($env:access_token)@github.com/bitprim/bitprim.github.io.git
+        git push --quiet --set-upstream origin-commit master
 
 test: off
