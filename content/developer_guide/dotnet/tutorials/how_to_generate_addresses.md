@@ -12,7 +12,8 @@ In this tutorial you will learn:
 
 ## Generate Seed
 
-First yo need a seed to generate the private key. The seed must be a random string with a high degree of entropy. For this we use the following method.
+First you need a seed to generate the private key. The seed must be a random string with a high degree of entropy. 
+For this, we use the following method.
 
 ```c#
 
@@ -20,7 +21,7 @@ First yo need a seed to generate the private key. The seed must be a random stri
 
 ## Generate Private key 
 
-Now we can generate the private key. The private key has 256 bits in lenght. And can be encoded in different formats:
+Now we can generate the private key. The private key has 256 bits in length. And can be encoded in different formats:
 
 * Raw
 * Hex
@@ -44,12 +45,12 @@ The public key is derived from the private key using elliptic curve calculations
 ## Generate Address
 
 Now we can generate our public address to share with anyone. 
-If K is the public key. The resulting address A is:
+If K is the public key, the resulting address A is:
 
 ```
-A = RIPEMD160(SHA256(K))
+A = Base58Check(RIPEMD160(SHA256(K)))
 ```
-And then encoded in Base58Check.
+
 
 ```c#
 ```
