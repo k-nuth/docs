@@ -7,6 +7,8 @@
       href: ../../restapi/toc.md  
 - name: C#
   href: dotnet/dotnet-interface.md
-  items: 
+  items:
+    - name: Installation
+      href: dotnet/tutorials/installation.md 
     - name: Reference
       href: ../../obj/bitprim-cs/toc.yml
