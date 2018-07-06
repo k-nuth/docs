@@ -2,7 +2,7 @@
 
 ## Nuget
 
-You can install the Bitprim C# binding via Nuget.
+You can install the Bitprim .Net binding via Nuget.
 
 There are two packages available:
 
