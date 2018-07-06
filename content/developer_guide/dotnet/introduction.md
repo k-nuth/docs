@@ -10,7 +10,7 @@ The platform invoke mechanism was chosen in order  to support as many operating 
 
 ## Basic structure
 
----
+The api is fully written in C#.
 
 See [the source in Github](https://github.com/bitprim/bitprim-cs/tree/master):
 
