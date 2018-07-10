@@ -61,7 +61,7 @@ on_success:
   - cd ../bitprim.github.io
   - git add .
   - git commit -m "Updated documentation site"
-  - ps: git remote add origin-commit "https://$($env:access_token)@github.com/bitprim/bitprim.github.io.git`n"
+  - ps: git remote add origin-commit https://$($env:access_token)@github.com/bitprim/bitprim.github.io.git
   - git push --set-upstream origin-commit master
   
 test: off
