@@ -9,4 +9,4 @@ cd ../bitprim.github.io
 git add .
 git commit -m "Updated documentation site"
 git remote add origin-commit https://$($env:access_token)@github.com/bitprim/bitprim.github.io.git
-git push --quiet --set-upstream origin-commit master
+git push --set-upstream origin-commit master
