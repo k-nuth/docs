@@ -60,8 +60,7 @@ on_success:
 #  - git config --global user.name "Bitprim CI"
 #  - git clone https://github.com/bitprim/bitprim.github.io.git
   - ps: Write-Host "All environment variables:"
-  - ps: Write-Host $env
-  - ps: Write-Host $env:GIT_ACCESS_TOKEN
+  - ps: Get-ChildItem Env:
   - ps: git clone "https://ci@bitprim.org:$env:GIT_ACCESS_TOKEN@github.com/bitprim/bitprim.github.io.git"
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
