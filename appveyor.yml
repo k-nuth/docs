@@ -53,12 +53,13 @@ build_script:
   - docfx
 
 on_success:
-  - git config --global credential.helper store
-  - ps: Add-Content "$HOMEPATH\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - ps: Get-Content "$HOMEPATH\.git-credentials"
-  - git config --global user.email "ci@bitprim.org"
-  - git config --global user.name "Bitprim CI"
-  - git clone https://github.com/bitprim/bitprim.github.io.git
+#  - git config --global credential.helper store
+#  - ps: Add-Content "$HOMEPATH\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+#  - ps: Get-Content "$HOMEPATH\.git-credentials"
+#  - git config --global user.email "ci@bitprim.org"
+#  - git config --global user.name "Bitprim CI"
+#  - git clone https://github.com/bitprim/bitprim.github.io.git
+  - git clone https://ci@bitprim.org:%access_token%@github.com:bitprim/bitprim.github.io.git
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
   - cd ../bitprim.github.io
