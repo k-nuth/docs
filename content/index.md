@@ -24,4 +24,4 @@ The platform includes:
 * C Interface
 * C++ Interface
 * Interfaces for Go, Python, Node, C\#, Rust and Eiffel
-* Full REST API implementation, compatible with insight API
+* Full Rest API implementation, compatible with insight API

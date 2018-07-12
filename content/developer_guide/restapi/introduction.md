@@ -1,9 +1,6 @@
 # Introduction
 
-*Bitprim Insight* 
-> Multi-Cryptocurrency _Rest_ API.
-
-*Bitprim Insight* is a REST API written in _C#_ with .NET Core 2.x which exposes methods matching the insight API interface
+*Bitprim Insight* is a Rest API written in _C#_ with .NET Core 2.x which exposes methods matching the insight API interface.
 
 Bitprim Insight supports the following cryptocurrencies:
   * [Bitcoin Cash](https://www.bitcoincash.org/)
@@ -18,7 +15,9 @@ Bitprim Insight supports the following cryptocurrencies:
 - [.NET Core 2.0 SDK](https://www.microsoft.com/net/download/)
 
 
-In case there are no pre-built binaries for your platform, conan will automatically try to build from source code. In such a scenario, the following requirements must be added to the previous ones:
+Although *Bitprim Insight* is a .NET managed API, it is build on top of an unmanaged C++ library. A binary of said library is retrieved by Conan
+automatically when building *Bitprim Insight*. But, in case there are no pre-built binaries for your platform, Conan will automatically try to
+download the native source code and build the native library locally. In such a scenario, the following requirements must be added to the previous ones:
 
 - C++11 Conforming Compiler.
 - [CMake](https://cmake.org/) building tool, version 3.4 or newer.
@@ -26,25 +25,31 @@ In case there are no pre-built binaries for your platform, conan will automatica
 
 ## Building Procedure
 
-The *Bitprim* libraries can be installed using conan (see below) on Linux, macOS, FreeBSD, Windows and others. These binaries are pre-built for the most usual operating system/compiler combinations and are downloaded from an online repository. If there are no pre-built binaries for your platform, conan will attempt to build from source during the installation.
+The *Bitprim Insight* API can be built on any system supported by the .NET Core 2.0 SDK.
 
-1. Build 
+1. Get source
+
+```
+git clone https://github.com/bitprim/bitprim-insight.git
+```
+
+2. Build 
 
 In the project folder run:
 
 For Bitcoin Cash
 
 ```
-dotnet build /property:Platform=x64 /p:BCH=true -c Release -f netcoreapp2.0 -v normal
+dotnet build /p:BCH=true -c Release -v normal
 ```
 
 For Bitcoin
 
 ```
-dotnet build /property:Platform=x64 /p:BTC=true -c Release -f netcoreapp2.0 -v normal
+dotnet build /p:BTC=true -c Release -v normal
 ```
 
-2. Run
+3. Run
 
 ```
 dotnet bin/x64/Release/netcoreapp2.0/bitprim.insight.dll --server.port=3000 --server.address=0.0.0.0
@@ -73,7 +78,7 @@ dotnet bin/x64/Release/netcoreapp2.0/published/bitprim.insight.dll --server.port
 ## Configuration Options
 
 
-You need to create an appsettings.json file in the build directory to run the application. You can use appsettings.example.json as a starting point.
+You can create an appsettings.json file in the build directory to run the application. You can use appsettings.example.json as a starting point.
 
 Eg.
 
@@ -160,7 +165,7 @@ In **Forwarder** mode, the application only relays the request to a **Full Node*
 
 **ApiPrefix**: Defines the name of the url segment where you expose the api methods.
 ```
-http://blockdozer.com/[ApiPrefix]/blocks/
+http://[DomainUrl]/[ApiPrefix]/blocks/
 ```
 *Default value:api*
 

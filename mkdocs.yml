@@ -20,7 +20,7 @@ pages:
         - Release Notes: user_guide/releases_notes.md 
     - Developer Guide:
         - Introduction: developer_guide/introduction.md
-        - Rest Api: developer_guide/restapi/introduction.md
+        - Rest API: developer_guide/restapi/introduction.md
         - .Net: 
             - Introduction: developer_guide/dotnet/dotnet-Interface.md
             
