@@ -36,8 +36,6 @@ configuration:
 - Release
 
 environment:
-    GIT_ACCESS_TOKEN:
-      secure: ErUbaWTVjfp8LLH3y6Zh+20sXGFrmIyIb2xMPDsRwtPDSoTCCmFmD6zEJ1b2R6NE
 
     VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
 
@@ -63,7 +61,8 @@ on_success:
   - ps: Write-Host "All environment variables:"
   - ps: Get-ChildItem "Env:"
   - set "CLONE_URL=https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
-  - echo %CLONE_URL% | git clone
+  - echo %CLONE_URL%
+  - git clone %CLONE_URL%
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
   - cd ../bitprim.github.io
