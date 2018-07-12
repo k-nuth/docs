@@ -27,7 +27,6 @@ branches:
     - /^release-\d+\.\d+\.\d+$/
     - /^feature-ci-.+$/
     - /^feature_ci_.+$/
-    - feature-BIT-175
 
 platform:
   - x64
