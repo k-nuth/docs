@@ -15,7 +15,7 @@ Bitprim Insight supports the following cryptocurrencies:
 - [.NET Core 2.0 SDK](https://www.microsoft.com/net/download/)
 
 
-Although *Bitprim Insight* is a .NET managed API, it is build on top of an unmanaged C++ library. A binary of said library is retrieved by Conan
+Although *Bitprim Insight* is a .NET managed API, it is build on top of an unmanaged C library. A binary of said library is retrieved by Conan
 automatically when building *Bitprim Insight*. But, in case there are no pre-built binaries for your platform, Conan will automatically try to
 download the native source code and build the native library locally. In such a scenario, the following requirements must be added to the previous ones:
 
