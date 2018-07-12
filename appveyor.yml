@@ -53,8 +53,8 @@ build_script:
 
 on_success:
   - git clone "https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
-  - git config --global user.email "dario.fenix@gmail.com"
-  - git config --global user.name "dario-ramos"
+  - git config --global user.email "ci@bitprim.org"
+  - git config --global user.name "bitprim-ci"
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
   - cd ../bitprim.github.io
