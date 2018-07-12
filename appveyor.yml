@@ -62,8 +62,9 @@ on_success:
 #  - git clone https://github.com/bitprim/bitprim.github.io.git
   - ps: Write-Host "All environment variables:"
   - ps: Get-ChildItem "Env:"
-  - echo %GIT_ACCESS_TOKEN%
-  - ps: git clone "https://$Env:GIT_ACCESS_TOKEN@github.com/bitprim/bitprim.github.io.git"
+  - set "CLONE_URL=https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
+  - echo %CLONE_URL%
+  - ps: git clone "%CLONE_URL%"
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
   - cd ../bitprim.github.io
