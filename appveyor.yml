@@ -63,6 +63,7 @@ on_success:
   - set "CLONE_URL=https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
   - echo %CLONE_URL%
   - git clone %CLONE_URL%
+  - git config --global user.email "dario.fenix@gmail.com"
   - git config --global user.name "dario-ramos"
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
