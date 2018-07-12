@@ -5,8 +5,10 @@
   items:
     - name: Reference
       href: ../../restapi/toc.md  
-- name: C#
-  href: dotnet/dotnet-interface.md
-  items: 
+- name: .Net Api
+  href: dotnet/introduction.md
+  items:
+    - name: Installation
+      href: dotnet/installation.md 
     - name: Reference
       href: ../../obj/bitprim-cs/toc.yml
