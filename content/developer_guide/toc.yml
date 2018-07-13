@@ -3,6 +3,12 @@
 - name: Rest Api
   href: restapi/introduction.md
   items:
+    - name: Installation
+      href: restapi/installation.md
+    - name: Configuration
+      href: restapi/configuration.md
+    - name: Websockets
+      href: restapi/websockets.md
     - name: Reference
       href: ../../restapi/toc.md  
 - name: .Net Api
