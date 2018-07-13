@@ -12,5 +12,5 @@ You can view an example [here](https://github.com/bitprim/bitprim-config)
 > If you pass an empty string, the node will use the default settings.
 >
 
-Then yo need to start the executor with @Bitprim.Executor.InitAndRunAsync
+Then you need to start the executor with @Bitprim.Executor.InitAndRunAsync
 
