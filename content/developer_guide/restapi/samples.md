@@ -114,6 +114,11 @@ With the block hash, its transactions can now be navigated using the [GetTransac
 ```
 For this block, there are 10 pages of transactions to process. It is possible to iterate over the pages by calling `GetTransactions` again with the same block hash and a different `pageNum` parameter, from 0 to 9. This way, the whole block can be traversed searching for Memo transactions. These steps can be replicated for the previous block, and so on until N Memo posts are found.
 
+As an optimization, using these same methods, it would be possible to scrape the whole blockchain from genesis to top to retrieve all Memo posts,
+save them to an external storage and cache them to avoid scraping every time. Then, it could be possible to modify the scraping code to start from
+a specific height, so as to periodically update, or monitor incoming blocks to detect Memo posts as soon as possible (see
+[Websockets API](https://bitprim.github.io/docfx/content/developer_guide/restapi/websockets.html)). 
+
 ## Making a Memo post
 
 To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [BroadcastTransaction method](https://bitprim.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_BroadcastTransaction). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
