@@ -10,7 +10,9 @@
     - name: Websockets
       href: restapi/websockets.md
     - name: Reference
-      href: ../../restapi/toc.md  
+      href: ../../restapi/toc.md
+    - name: Samples
+      href: restapi/samples.md  
 - name: .Net Api
   href: dotnet/introduction.md
   items:
