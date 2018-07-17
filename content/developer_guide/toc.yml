@@ -1,6 +1,6 @@
 ﻿- name: Introduction
   href: introduction.md
-- name: Rest Api
+- name: Rest API
   href: restapi/introduction.md
   items:
     - name: Installation

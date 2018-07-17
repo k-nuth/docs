@@ -1,1 +1,1 @@
-﻿# [Bitprim API](bitprim-api.json)
+﻿# [Bitprim Insight API](bitprim-api.json)
