@@ -22,7 +22,7 @@ pages:
         - Introduction: developer_guide/introduction.md
         - Rest API: developer_guide/restapi/introduction.md
         - .Net: 
-            - Introduction: developer_guide/dotnet/dotnet-Interface.md
+            - Introduction: developer_guide/dotnet/introduction.md
             
         - C:
             - Introduction: developer_guide/c/C-interface.md

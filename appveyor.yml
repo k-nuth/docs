@@ -22,11 +22,9 @@ build: off
 branches:
   only:
     - master
-    - dev
-    - /^v\d+\.\d+\.\d+$/
-    - /^release-\d+\.\d+\.\d+$/
-    - /^feature-ci-.+$/
-    - /^feature_ci_.+$/
+
+
+skip_branch_with_pr: true
 
 platform:
   - x64
@@ -35,8 +33,6 @@ configuration:
 - Release
 
 environment:
-    access_token:
-      secure: ErUbaWTVjfp8LLH3y6Zh+20sXGFrmIyIb2xMPDsRwtPDSoTCCmFmD6zEJ1b2R6NE
 
     VS150COMNTOOLS: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\"
 
@@ -46,15 +42,21 @@ environment:
 
 install:
   - git submodule init
-  - git submodule update
+  - git submodule update --remote
   - cinst docfx
 
 build_script:
   - docfx
 
 on_success:
+  - git clone "https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
+  - git config --global user.email "ci@bitprim.org"
+  - git config --global user.name "bitprim-ci"
+  - cd _site
+  - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
+  - cd ../bitprim.github.io
+  - git add .
+  - git commit -m "Updated documentation site"
+  - git push 
   
-  - ps: |
-       ./deploy.ps1
-
 test: off

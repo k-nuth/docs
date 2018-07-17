@@ -10,7 +10,7 @@ The platform invoke mechanism was chosen in order  to support as many operating 
 
 ## Basic structure
 
----
+The api is fully written in C#.
 
 See [the source in Github](https://github.com/bitprim/bitprim-cs/tree/master):
 
@@ -18,4 +18,11 @@ See [the source in Github](https://github.com/bitprim/bitprim-cs/tree/master):
 * **native classes**: These are all static classes, since each of these contains a set of DllImports of the native C functions.
 
 
+## .Net standard Support
+
+The api implements .net standard 2.0 support to allow multiple consumers.
+
+## Multiples coins
+
+Our API implements bindings for Bitcoin Cash (BCH) and Bitcoin Legacy (BCT). Litecoin (LTC) is in progress.
 
