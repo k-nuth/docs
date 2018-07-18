@@ -12,7 +12,7 @@
     - name: Reference
       href: ../../restapi/toc.md
     - name: Samples
-      href: restapi/samples.md  
+      href: restapi/tutorials.md  
 - name: .Net Api
   href: dotnet/introduction.md
   items:

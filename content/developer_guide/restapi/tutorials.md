@@ -1,9 +1,21 @@
-# Samples
+# Tutorials
+
+## Introduction
 
 As an example of what can be achieved with the bitprim-insight Rest API, we'll show how to implement a [Memo.cash](https://memo.cash/)
 explorer consuming the API from a C# console application.
 
-## Identifying a Memo transaction
+Memo.cash is a Twitter-like social network built on top of the Bitcoin Cash Network. Posts are published as transactions with OP_RETURN
+output scripts using [Memo-specific prefix codes](https://memo.cash/protocol).
+
+For this tutorial, our use cases will be:
+
+1. Identifying a Memo transaction and scraping them from the BCH blockchain.
+2. Creating and publishing a Memo post.
+
+The code for this tutorial is available in [Github](https://github.com/bitprim/bitprim-insight.git), in the `bitprim.insight.tutorials` folder.
+
+## 1. Identifying a Memo transaction
 
 Given a transaction hash, we want to be able to tell whether it's a Memo transaction or not. A Memo transaction uses
 OP_RETURN in at least one of its outputs, and that output's script will have the memo opcode. For example,
@@ -77,9 +89,11 @@ This will be the result:
 ```
 
 Focus on the second output (n=1), in its `asm` field: it's an OP_RETURN operation. Furthermore, take a look at the
-prefix codes: `return [6d0c] [6d656d6f]`. By reading the content of the square brackets as hex strings, we get `return [m\n] [memo]`. This is what identifies this as a Memo transaction. Finally, if we decode the third hex string between square brackets, we get the Memo post: `Yesterday 150632-148590=2042 memo transactions. Number of transactionsð20%. Charts available at https://memo.cash/charts . considering whether should I stop this recording???`
+prefix codes: `return [6d0c] [6d656d6f]`. By reading the content of the square brackets as hex strings, we get `return [m\n] [memo]`. The first
+string between square brackets is what identifies this as a Memo transaction, according to the [Memo protocol](https://memo.cash/protocol).
+Finally, if we decode the third hex string between square brackets, we get the Memo post: `Yesterday 150632-148590=2042 memo transactions. Number of transactionsð20%. Charts available at https://memo.cash/charts . considering whether should I stop this recording???`
 
-## Reading the N most recent Memo posts
+### Reading the N most recent Memo posts
 
 Now that we can tell if a transaction is Memo or not, we can use the Bitprim API to traverse the blockchain and scrape them.
 Suppose we want the N most recent posts. First, we need to know the current BCH blockchain height. This can be done using the [GetSyncStatus method](https://bitprim.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetSyncStatus). A sample output of this command would look this way:
@@ -119,6 +133,6 @@ save them to an external storage and cache them to avoid scraping every time. Th
 a specific height, so as to periodically update, or monitor incoming blocks to detect Memo posts as soon as possible (see
 [Websockets API](https://bitprim.github.io/docfx/content/developer_guide/restapi/websockets.html)). 
 
-## Making a Memo post
+## 2. Making a Memo post
 
 To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [BroadcastTransaction method](https://bitprim.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_BroadcastTransaction). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
