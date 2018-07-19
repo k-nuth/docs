@@ -11,7 +11,7 @@
       href: restapi/websockets.md
     - name: Reference
       href: ../../restapi/toc.md
-    - name: Samples
+    - name: Tutorials
       href: restapi/tutorials.md  
 - name: .Net Api
   href: dotnet/introduction.md
