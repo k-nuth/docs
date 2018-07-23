@@ -20,3 +20,5 @@
       href: dotnet/installation.md 
     - name: Reference
       href: ../../obj/bitprim-cs/toc.yml
+    - name: Tutorials
+      href: dotnet/tutorials/memo.md
