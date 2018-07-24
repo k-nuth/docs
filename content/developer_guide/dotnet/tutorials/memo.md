@@ -61,6 +61,10 @@ using (var executor = new Executor("bcc-mainnet.cfg"))
 }
 ```
 
+The executor constructor requires a node configuration file; its values will depende on the coin (BCH/BTC/LTC), and the network (testnet/mainnet).
+For details on each field, see the [libbitcoin documentation](https://github.com/libbitcoin/libbitcoin-server/wiki/Log-Settings).
+Various sample config files for bitprim nodes are [publicly available in Github](https://github.com/bitprim/bitprim-config). 
+
 ## 1. Identifying a Memo transaction
 
 Given a transaction hash, we want to be able to tell whether it's a Memo transaction or not. A Memo transaction uses
@@ -132,4 +136,3 @@ a specific height, so as to periodically update, or monitor incoming blocks to d
 To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [Transaction constructor](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Transaction.html#Bitprim_Transaction__ctor_UInt32_System_String_); for the transaction protocol version,
 1 is the recommended value. Once the transaction object is created, it can be handed to the 
  [OrganizeTransactionAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_OrganizeTransactionAsync_Bitprim_Transaction_). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
- 
