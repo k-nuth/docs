@@ -21,4 +21,4 @@
     - name: Reference
       href: ../../obj/bitprim-cs/toc.yml
     - name: Tutorials
-      href: dotnet/tutorials/memo.md
+      href: dotnet/tutorials/tutorials.md
