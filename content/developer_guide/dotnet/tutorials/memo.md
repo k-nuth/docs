@@ -10,6 +10,33 @@ output scripts using [Memo-specific prefix codes](https://memo.cash/protocol).
 
 The code for this tutorial is available in [Github](https://github.com/bitprim/bitprim-cs.git), in the `bitprim.tutorials` folder.
 
+## Referencing bitprim-cs
+
+In the sample code, in `bitprim.tutorials.csproj`, a project reference to bitprim-cs (BCH version) is used:
+
+```
+<ItemGroup>
+  <ProjectReference Include="..\bitprim-bch\bitprim-bch.csproj" />
+</ItemGroup>
+```
+
+When the API is referenced like this, it is necessary to manually copy the underlying native dll (libbitprim-nodecint.so or .dll) to the target dir.
+We have provided a `.targets` file which performs that task. In `bitprim.tutorials.csproj`, that target is imported...
+
+```
+<Import Project="..\bitprim-bch\build\Common.targets" />
+```
+
+... and invoked after build:
+
+```
+<Target Name="CopyNativeLib" AfterTargets="Build">
+  <CallTarget Targets="GetBitprimNodeCint" />
+</Target>
+```
+
+When referencing bitprim-cs [via](https://www.nuget.org/packages/bitprim-bch) [NuGet](https://www.nuget.org/packages/bitprim-btc), these steps are unnecessary, since they are injected automatically by NuGet when restoring.
+
 ## API basic usage
 
 Using bitprim-cs implies running a full bitprim node, so keep in mind that considerable storage space will be needed if connecting to mainnet.
