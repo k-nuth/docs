@@ -1,4 +1,4 @@
-# Memo.cash tutorial
+# Tutorials
 
 ## Introduction
 
@@ -61,7 +61,7 @@ using (var executor = new Executor("bcc-mainnet.cfg"))
 }
 ```
 
-## Identifying a Memo transaction
+## 1. Identifying a Memo transaction
 
 Given a transaction hash, we want to be able to tell whether it's a Memo transaction or not. A Memo transaction uses
 OP_RETURN in at least one of its outputs, and that output's script will have the memo opcode. For example,
@@ -126,3 +126,10 @@ As an optimization, using these same methods, it would be possible to scrape the
 save them to an external storage and cache them to avoid scraping every time. Then, it could be possible to modify the scraping code to start from
 a specific height, so as to periodically update, or monitor incoming blocks to detect Memo posts as soon as possible (see
 [SubscribeToBlockChain](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_SubscribeToBlockChain_Bitprim_Executor_BlockHandler_)). 
+
+## 2. Making a Memo post
+
+To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [Transaction constructor](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Transaction.html#Bitprim_Transaction__ctor_UInt32_System_String_); for the transaction protocol version,
+1 is the recommended value. Once the transaction object is created, it can be handed to the 
+ [OrganizeTransactionAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_OrganizeTransactionAsync_Bitprim_Transaction_). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
+ 
