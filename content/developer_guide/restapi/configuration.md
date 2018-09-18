@@ -34,6 +34,7 @@ Eg.
   "WebsocketsEnabled": true,
   "WebsocketsMsgBlockEnabled": true,
   "WebsocketsMsgTxEnabled": true,
+  "WebsocketsMsgTxIncludeVout": false,
   "WebsocketsMsgAddressTxEnabled": true,
   "WebsocketsForwarderClientRetryDelay": 10,
   "Serilog":
@@ -199,6 +200,10 @@ http://blockdozer.com/[ApiPrefix]/blocks/
 
 **WebsocketsMsgTxEnabled**: Define if the node sends tx messages.
 *Default value:true*
+
+**WebsocketsMsgTxIncludeVout**: If and only if true, include transaction outputs in tx web socket message.
+If included, outputs will be represented as an array of (address, amount) pairs.
+*Default value:false*
 
 **WebsocketsMsgAddressTxEnabled**: Define if the node sends addresstx messages.
 *Default value:true*
