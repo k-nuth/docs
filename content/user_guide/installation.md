@@ -36,11 +36,11 @@ Bitprim includes three databases modes, adapted to distinct uses cases.
 - default
 - full
 
-The database mode selection is via the *db* setting in the conan command line.
+The database mode selection is done via the *db* setting in the conan command line.
 
 #### Pruned
 
-In this mode, the node only has the block's headers and the UTXO. This mode is optimized for miners and nodes that only requires validate new blocks and follow the chain.
+In this mode, the node only has the block headers and the UTXO. This mode is optimized for miners and nodes that only require validating new blocks and following the chain.
 
 Eg.
 
@@ -65,11 +65,11 @@ conan install bitprim-node-exe/0.X@bitprim/stable
 
 #### Full
 
-This is the most complete mode. In this mode, the node store the full blocks, the UTXO and maintains various indexes to speed up some queries.
+This is the most complete mode. In this mode, the node stores the full blocks, the UTXO and maintains various indexes to speed up some queries.
 
 - Transactions by hash
 - Full history by address
-- Spends outputs
+- Spent outputs
 
 This is the best mode for an Insight API node or if you want to use RPC to query the node.
 
