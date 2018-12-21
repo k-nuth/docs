@@ -18,9 +18,9 @@ conan remote add bitprim https://api.bintray.com/conan/bitprim/bitprim
 
 ```
 # For Bitcoin Cash
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH 
+conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH
 # ... or (BCH is the default crypto)
-conan install bitprim-node-exe/0.X@bitprim/stable 
+conan install bitprim-node-exe/0.X@bitprim/stable
 
 # For Bitcoin Legacy
 conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BTC
@@ -35,7 +35,6 @@ In case there are no pre-built binaries for your platform, it is necessary to bu
 
 - C++11 Conforming Compiler.
 - [CMake](https://cmake.org/) building tool, version 3.4 or newer.
-
 
 ## Running the node
 
@@ -66,7 +65,7 @@ Specifically, you can choose your computer _microarchitecture_ to download a pre
 
 ```
 # For Haswell microarchitecture and Bitcoin Cash currency
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH -o microarchitecture=haswell 
+conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH -o microarchitecture=haswell
 ```
 So, you can manually choose the appropriate microarchitecture, some examples are: _x86_64_, _haswell_, _ivybridge_, _sandybridge_, _bulldozer_, ...  
 By default, if you do not specify any, the building system will select a base microarchitecture corresponding to your _Instruction Set Architecture_ (ISA). For example, for _Intel 80x86_, the x86_64 microarchitecture will be selected.
@@ -77,5 +76,5 @@ Our build system has the ability to automatically detect the microarchitecture o
 
 ```
 pip install cpuid
-conan install bitprim-node-exe/0.X@bitprim/stable 
+conan install bitprim-node-exe/0.X@bitprim/stable
 ```
