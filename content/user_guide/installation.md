@@ -28,6 +28,56 @@ conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BTC
 # For Litecoin
 conan install bitprim-node-exe/0.X@bitprim/stable -o currency=LTC
 ```
+### Database selection
+
+Bitprim includes three databases modes, adapted to distinct uses cases.
+
+- pruned
+- default
+- full
+
+The dabatase mode selection is via the *db* setting in the conan command line.
+
+#### Pruned
+
+In this mode, the node only has the block's headers and the UTXO. This mode is optimized for miners and nodes that only requires validates new blocks and follow the chain.
+
+Eg.
+
+```
+conan install bitprim-node-exe/0.X@bitprim/stable -o db=pruned
+```
+
+#### Default
+
+This is the default mode if you don't specify the *db* parameter in conan.
+In this mode, the node stores the full blocks and the UTXO. This is the most common case for users who wants to setup a node to serve as a peer to the network.
+
+Eg.
+
+```
+conan install bitprim-node-exe/0.X@bitprim/stable -o db=default
+
+or directly
+
+conan install bitprim-node-exe/0.X@bitprim/stable
+```
+
+#### Full
+
+This is the most complete mode. In this mode, the node store the full blocks, UTXO and maintains various indexes to speed up some queries.
+
+- Transactions by hash
+- Full history by address
+- Spends outputs
+
+This is the best mode for an Insight API node or if you want to use RPC to query the node.
+
+Eg.
+
+```
+conan install bitprim-node-exe/0.X@bitprim/stable -o db=full
+```
 
 ## Building from source Requirements
 
