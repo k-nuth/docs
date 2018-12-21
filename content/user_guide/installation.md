@@ -28,6 +28,7 @@ conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BTC
 # For Litecoin
 conan install bitprim-node-exe/0.X@bitprim/stable -o currency=LTC
 ```
+
 ### Database selection
 
 Bitprim includes three databases modes, adapted to distinct uses cases.
@@ -37,6 +38,8 @@ Bitprim includes three databases modes, adapted to distinct uses cases.
 - full
 
 The database mode selection is done via the *db* setting in the conan command line.
+
+RPC is enabled in all modes, but the queries available depend on the selected mode.
 
 #### Pruned
 
