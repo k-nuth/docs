@@ -2,7 +2,7 @@
 *Simple queries to the Blockchain.*
 
 ## Using swagger:
-After running Insight, swagger can be used to try all the API calls:
+After running Insight, swagger can be used to test all the API calls:
 
 [​http://0.0.0.0:3000/swagger/index.html​](​http://0.0.0.0:3000/swagger/index.html​)
 
