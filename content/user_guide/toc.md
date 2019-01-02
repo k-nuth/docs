@@ -3,7 +3,7 @@
 # [Requirements](requirements.md)
 # [Node Simple Installation](node_simple_installation.md)
 # [Run the node](run_the_node.md)
-# [Insight Installation](insight_installation.md)
+# [Simple Insight Installation](insight_installation.md)
 # [Run insight](run_insight.md)
 # [Query the API](query_the_api.md)
 # [Advanced Installation](advanced_installation.md)
