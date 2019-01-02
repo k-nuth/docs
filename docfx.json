@@ -23,6 +23,7 @@
         "files": ["content/**/*.md" , 
                   "*.md", 
                   "content/developer_guide/toc.yml",  
+                  "content/configuration_files/toc.yml",  
                   "toc.yml", 
                   "restapi/**" 
                 ]

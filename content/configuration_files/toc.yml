@@ -1,0 +1,16 @@
+﻿- name: Configuration Files
+  items:
+    - name: BCH
+      href: bitcoincash_mainnet.md
+    - name: TBCH
+      href: bitcoincash_testnet.md
+    - name: BTC
+      href: bitcoin_mainnet.md
+    - name: TBTC
+      href: bitcoin_testnet.md
+    - name: LTC
+      href: litecoin_mainnet.md
+    - name: TLTC
+      href: litecoin_testnet.md
+    - name: Insight
+      href: insight.md

@@ -6,3 +6,6 @@
 - name: Developer Guide
   href: content/developer_guide/
   homepage: content/developer_guide/introduction.md
+- name: Configuration Files
+  href: content/configuration_files/
+  homepage: content/configuration_files/bitcoincash_mainnet.md
