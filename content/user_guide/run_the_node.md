@@ -4,7 +4,7 @@
 ## Choose your configuration file:
 The configuration files are listed on the Bitprim Node Configuration Files section.
 
-The configuration file is going to be pass to the Bitprim node using the argument `-c /path/to/file`
+The configuration file will be passed to the Bitprim node using the argument `-c /path/to/file`
 
 For this example I'm going to use the one for the `Bitcoin Cash Testnet`. 
 
@@ -36,7 +36,7 @@ After initializing the database, the node needs to be run without the `-i` param
 ./bn -c config.cfg
 ```
 
-The node will start to download the blockchain and start to accept request via RPC.
+The node will start to download the blockchain and start to accept requests via RPC.
 
 ## Request blockchain info:
 The RPC port and IP allowed to request information can be set in the configuration file.
@@ -60,7 +60,7 @@ This error is shown when the port is already in use. It can be fixed changing th
 ## Known problems:
 
 **Error seeding host addresses:**
-Some times the dns seeds do not work well and the node will exist with an error saying:
+Sometimes the dns seeds do not work well and the node will exit with an error saying:
 ```
 Error seeding host addresses: unresponsive peer may be throttling
 ```

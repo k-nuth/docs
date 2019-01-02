@@ -1,5 +1,5 @@
 # Insight Installation
-*Installation of the C# node + REST-API*
+*C# node + REST-API installation*
 
 ## Before the installation:
 
@@ -22,4 +22,4 @@ cd bitprim-insight/bitprim.insight
 dotnet build /p:BCH=true -c Release -v normal
 ```
 
-**NOTE:** *The project can also be built for BTC changing the parameter /p:BCH=true for /p:BTC=true*
+**NOTE:** *The project can also be built for BTC changing the parameter /p:BCH=true to /p:BTC=true*

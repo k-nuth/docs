@@ -12,7 +12,7 @@ When running the nodes in the **default or pruned mode**, the node doesn't requi
 
 ### Full nodes:
 
-The Bitprim's database is a Memory Mapped Database so it will try to allocate the database on RAM as much as it can. When running the nodes with using the **Full mode** or using the **Insight-API** the node will create all the extra databases to store the processed information so at least **64Gb of RAM** is recommended and it will require **644Gb** of disk space.
+The Bitprim database is a Memory Mapped Database so it will try to allocate the database on RAM as much as it can. When running the nodes with using the **Full mode** or using the **Insight-API** the node will create all the extra databases to store the processed information so at least **64Gb of RAM** is recommended and it will require **644Gb** of disk space.
 
 ## Software Requirements:
 
@@ -20,7 +20,7 @@ This guide is only for Debian systems but the instructions can be adapted for an
 
 ### Conan:
 
-Bitprim uses [Conan.io](https://conan.io/) for the package management. Conan will download the binary files for your architecture if they exists in the [Bintray](https://bintray.com/) repository. If the binary files for your configuration are not stored in the Bintray repository, Conan will download the source files and compile the binary locally.
+Bitprim uses [Conan.io](https://conan.io/) for package management. Conan will download the binary files for your architecture if they exist in the [Bintray](https://bintray.com/) repository. If the binary files for your configuration are not stored in the Bintray repository, Conan will download the source files and compile the binary locally.
 
 * Install Conan:
   * The recommended way to install Conan is using python pip.
@@ -33,13 +33,13 @@ pip install conan
 
 **NOTE:** *After the pip install Conan some systems can not find the Conan binary, in some Debian versions the path is refreshed after a console restart or system reboot. In order to avoid restarting the system, the Conan path can be added to the terminal settings, for example editing the ~/.bashrc file. More information [here](https://docs.conan.io/en/latest/installation.html).*
 
-* Add the Bitprim's Conan remote
+* Add Bitprim's Conan remote
 ```
 conan remote add bitprim https://api.bintray.com/conan/bitprim/bitprim
 ```
 
 ### Build tools:
-When Conan needs to compile some code in your PC/VM this tools will be needed.
+When Conan needs to compile some code in your PC/VM these tools will be needed.
 
 ```
 apt-get install -y wget git curl libcurl4 cmake build-essential gcc g++
