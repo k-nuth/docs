@@ -18,6 +18,14 @@ pages:
         - Installation: user_guide/installation.md
         - RPC: user_guide/rpc.md
         - Release Notes: user_guide/releases_notes.md 
+    - Configuration Files:
+        - BCH: configuration_files/bitcoincash_mainnet.md
+        - TBCH: configuration_files/bitcoincash_testnet.md
+        - BTC: configuration_files/bitcoin_mainnet.md
+        - TBTC: configuration_files/bitcoin_testnet.md
+        - LTC: configuration_files/litecoin_mainnet.md
+        - TLTC: configuration_files/litecoin_testnet.md
+        - Insight: configuration_files/insight.md
     - Developer Guide:
         - Introduction: developer_guide/introduction.md
         - Rest API: developer_guide/restapi/introduction.md
