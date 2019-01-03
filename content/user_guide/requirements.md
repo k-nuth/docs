@@ -16,7 +16,7 @@ The Bitprim database is a Memory Mapped Database so it will try to allocate the 
 
 ## Software Requirements:
 
-This guide is only for Debian systems but the instructions can be adapted for any OS. The installation and usage steps were tested using an Ubuntu 18.10 docker image.
+This guide is only for Debian systems but the instructions can be adapted for any OS. The installation and usage steps were tested using an Ubuntu 18.04 docker image.
 
 ### Conan:
 
@@ -58,7 +58,9 @@ dpkg -i packages-microsoft-prod.deb
 add-apt-repository universe
 apt-get install apt-transport-https
 apt-get update
-apt-get install dotnet-sdk-2.1.202
+apt-get install dotnet-sdk-2.1
 ```
 
 **NOTE:** *The add-apt-repository call may fail depending on your system. But if the dotnet-skd install ends with no problems it was because the add-apt-repository call was not needed.*
+
+**NOTE:** *All of these commands require admin permission, if you are not root please use sudo.*
