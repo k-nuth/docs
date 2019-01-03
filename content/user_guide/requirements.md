@@ -51,14 +51,16 @@ Insight-API is written in C# so .NET core 2 is needed. Official instructions by 
 * Register Microsoft key and feed:
 ```
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
 ```
 * Install the SDK:
 ```
-sudo add-apt-repository universe
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install dotnet-sdk-2.1
+add-apt-repository universe
+apt-get install apt-transport-https
+apt-get update
+apt-get install dotnet-sdk-2.1
 ```
 
 **NOTE:** *The add-apt-repository call may fail depending on your system. But if the dotnet-skd install ends with no problems it was because the add-apt-repository call was not needed.*
+
+**NOTE:** *All of these commands require admin permission, if you are not root please use sudo.*
