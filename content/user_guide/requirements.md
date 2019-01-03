@@ -16,7 +16,7 @@ The Bitprim database is a Memory Mapped Database so it will try to allocate the 
 
 ## Software Requirements:
 
-This guide is only for Debian systems but the instructions can be adapted for any OS. The installation and usage steps were tested using an Ubuntu 18.10 docker image.
+This guide is only for Debian systems but the instructions can be adapted for any OS. The installation and usage steps were tested using an Ubuntu 18.04 docker image.
 
 ### Conan:
 
@@ -51,14 +51,14 @@ Insight-API is written in C# so .NET core 2 is needed. Official instructions by 
 * Register Microsoft key and feed:
 ```
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
 ```
 * Install the SDK:
 ```
-add-apt-repository universe
-apt-get install apt-transport-https
-apt-get update
-apt-get install dotnet-sdk-2.1.202
+sudo add-apt-repository universe
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.1
 ```
 
 **NOTE:** *The add-apt-repository call may fail depending on your system. But if the dotnet-skd install ends with no problems it was because the add-apt-repository call was not needed.*
