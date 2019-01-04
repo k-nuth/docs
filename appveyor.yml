@@ -53,7 +53,7 @@ on_success:
   - git config --global user.email "ci@bitprim.org"
   - git config --global user.name "bitprim-ci"
   - cd _site
-  - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docfx\ /s /e /y
+  - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docs\ /s /e /y
   - cd ../bitprim.github.io
   - git add .
   - git commit -m "Updated documentation site"
