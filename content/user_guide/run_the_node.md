@@ -2,7 +2,7 @@
 *Initialize the databases and let the IBD run.*
 
 ## Choose your configuration file:
-The configuration files are listed on the [Bitprim Node Configuration Files](../configuration_files/toc.yml) section.
+The configuration files are listed on the Bitprim Node Configuration Files section.
 
 The configuration file will be passed to the Bitprim node using the argument `-c /path/to/file`
 
