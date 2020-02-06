@@ -13,7 +13,7 @@ conan remove "*" -f
 
 ## Installation:
 
-### Clone the Bitprim-insight repository:
+### Clone the Knuth-insight repository:
 ```
 git clone https://github.com/k-nuth/insight
 ```

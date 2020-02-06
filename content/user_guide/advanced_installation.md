@@ -31,7 +31,7 @@ conan install kth-node-exe/0.X@kth/stable -o currency=LTC
 
 ### Database selection
 
-Bitprim includes three databases modes, adapted to different uses cases.
+Knuth includes three databases modes, adapted to different uses cases.
 
 - pruned
 - default
@@ -113,7 +113,7 @@ The above commands use the default configuration hardcoded in the executable. Yo
 
 ## Advanced Installation
 
-Bitprim is a high performance node, so we have some options and pre-built packages tuned for several platforms.
+Knuth is a high performance node, so we have some options and pre-built packages tuned for several platforms.
 Specifically, you can choose your computer _microarchitecture_ to download a pre-build executable compiled to take advantage of the instructions available in your processor. For example:
 
 ```

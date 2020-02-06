@@ -1,8 +1,8 @@
 # Node versions
-*The Bitprim node can be run like a "normal" (bitcoind) node with RPC support and also it can be run as an Insight API.*
+*The Knuth node can be run like a "normal" (bitcoind) node with RPC support and also it can be run as an Insight API.*
 
-## Bitprim as a simple node:
-The Bitprim node will download the complete chain and will allow the user to request some information using RPC calls. The node will validate new blocks and new transactions, it will also relay the ones that are valid.
+## Knuth as a simple node:
+The Knuth node will download the complete chain and will allow the user to request some information using RPC calls. The node will validate new blocks and new transactions, it will also relay the ones that are valid.
 
 **Types of databases:**
 
@@ -12,9 +12,9 @@ The Bitprim node will download the complete chain and will allow the user to req
 
 * The node also has a **full** mode that will store all the blocks and will generate new databases with the processed blockchain information such as address balance, address transactions and spent history. With this information the node can answer any query that the user will normally ask to a Blockchain Explorer. This data can be access using RPC but it's recommended to use **bitprim-insight** because it is compatible with the popular [Bitpay's](https://github.com/bitpay) [Insight-API](https://github.com/bitpay/insight-api).
 
-## Bitprim as an Insight-API:
+## Knuth as an Insight-API:
 
-The Bitprim node can be run using the C# implementation that will act like a full node, it will download and relay valid blocks and transactions and also it will set up a REST-API.
+The Knuth node can be run using the C# implementation that will act like a full node, it will download and relay valid blocks and transactions and also it will set up a REST-API.
 
 Using this C# implementation is the easier way to request information to the blockchain, the complete list of commands can be found [here](https://k-nuth.github.io/docfx/restapi/bitprim-api.html).
 

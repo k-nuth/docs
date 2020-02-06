@@ -1,8 +1,8 @@
-Bitprim's C interface, the [kth-node-cint](https://github.com/k-nuth/node-cint) project, is built on top of the C++ interface. Asides from allowing a C library or program to consume all the Bitprim functionality, it can act as the base to create bindings for many current popular programming languages, such as Javascript, C\#,  Golang, Java and Python. All of these languages can interface easily with C, but not with C++.
+Knuth's C interface, the [kth-node-cint](https://github.com/k-nuth/node-cint) project, is built on top of the C++ interface. Asides from allowing a C library or program to consume all the Knuth functionality, it can act as the base to create bindings for many current popular programming languages, such as Javascript, C\#,  Golang, Java and Python. All of these languages can interface easily with C, but not with C++.
 
 Granted, the Object Oriented paradigm is lost when transitioning to C, but it can be "recovered" when implementing a binding in an object oriented language such as C\#. In such a context, classes can be built in order to give application programmers a friendlier interface for integrating Bitcoin in their projects, bridging the gap created by C/C++'s inherent complexity.
 
-Therefore, Bitprim's interface is not really meant to be consumed directly, but as the basis for a higher level binding in another language. To make this task easier, most functions will receive a parameter which will wrap the implicit object \(this\), so that OOP can be preserved in the binding if possible.
+Therefore, Knuth's interface is not really meant to be consumed directly, but as the basis for a higher level binding in another language. To make this task easier, most functions will receive a parameter which will wrap the implicit object \(this\), so that OOP can be preserved in the binding if possible.
 
 ## Resource management
 

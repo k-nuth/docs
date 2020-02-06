@@ -86,7 +86,7 @@ dotnet bin/x64/Release/netcoreapp2.0/published/bitprim.insight.dll --server.port
 
 The application has two different operation modes. As a **Full Node** or a **Forwarder**.
 
-In **Full Node** mode, the application starts a full Bitprim node, generating a copy of the blockchain.
+In **Full Node** mode, the application starts a full Knuth node, generating a copy of the blockchain.
 
 In **Forwarder** mode, the application only relays the request to a **Full Node** application.
 

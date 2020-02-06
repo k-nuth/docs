@@ -36,9 +36,9 @@
     ],
     "overwrite": "specs/*.md",
     "globalMetadata": {
-      "_appTitle": "Bitprim Documentation Site",
+      "_appTitle": "Knuth Documentation Site",
       "_enableSearch": true, 
-      "_appFooter": "<span>Copyright © 2018 Bitprim</span>",
+      "_appFooter": "<span>Copyright © 2018 Knuth</span>",
       "_appLogoPath": "content/assets/b.png",
       "_gitContribute": {
         "branch": "master"

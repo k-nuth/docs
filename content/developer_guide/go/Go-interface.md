@@ -1,4 +1,4 @@
-Bitprim's Go interface is built on top of Bitprim's C interface, in this fashion:
+Knuth's Go interface is built on top of Knuth's C interface, in this fashion:
 
 ![](assets/binding_go.png)
 

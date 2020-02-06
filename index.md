@@ -1,10 +1,10 @@
-![Bitprim](content/assets/bitprim_logo_orange.png)
+![Knuth](content/assets/bitprim_logo_orange.png)
 
 ##### "Bringing decentralized solutions to everyday life"
 
-## Welcome to Bitprim
+## Welcome to Knuth
 
-Bitprim is a multi-coin developing platform, working with multi-languages programming compatible with the Satoshi Client.
+Knuth is a multi-coin developing platform, working with multi-languages programming compatible with the Satoshi Client.
 
 Download:
 

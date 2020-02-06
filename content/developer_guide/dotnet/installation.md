@@ -12,7 +12,7 @@ In case there are no pre-built binaries for your platform, conan will automatica
 
 ## Installation
 
-You can install the Bitprim C# binding via Nuget.
+You can install the Knuth C# binding via Nuget.
 
 There are two packages available:
 

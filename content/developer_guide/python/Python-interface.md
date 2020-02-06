@@ -1,4 +1,4 @@
-Bitprim's Pyhton interface is built on top of Bitprim's C interface, in this fashion:
+Knuth's Pyhton interface is built on top of Knuth's C interface, in this fashion:
 
 ![binding](assets/binding.png)
 

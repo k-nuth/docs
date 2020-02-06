@@ -95,7 +95,7 @@ Finally, if we decode the third hex string between square brackets, we get the M
 
 ### Reading the N most recent Memo posts
 
-Now that we can tell if a transaction is Memo or not, we can use the Bitprim API to traverse the blockchain and scrape them.
+Now that we can tell if a transaction is Memo or not, we can use the Knuth API to traverse the blockchain and scrape them.
 Suppose we want the N most recent posts. First, we need to know the current BCH blockchain height. This can be done using the [GetSyncStatus method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetSyncStatus). A sample output of this command would look this way:
 
 ```

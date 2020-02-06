@@ -1,6 +1,6 @@
-﻿# Bitprim documentation
+﻿# Knuth documentation
 
-This repository contains the Bitprim project's documentation.
+This repository contains the Knuth project's documentation.
 
 To read it online please go to <a href="https://k-nuth.github.io/docs/index.html" target="_blank">https://k-nuth.github.io/docs/index.html</a>
 

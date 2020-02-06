@@ -1,4 +1,4 @@
-Bitprim's .NET interface is built on top of Bitprim's C interface, in this fashion:
+Knuth's .NET interface is built on top of Knuth's C interface, in this fashion:
 
 ![](assets/dotnet_interface.png)
 

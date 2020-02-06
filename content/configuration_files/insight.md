@@ -1,9 +1,9 @@
 # Insight-API configuration file
-*Bitprim Insight configuration file.*
+*Knuth Insight configuration file.*
 
 ## Configuration file:
 
-This configuration file assumes that the Bitprim node configuration file is located in `/root/data/kth-node.cfg` and the logs will be stored in `/root/data/log-bitprim-insight/log-.txt`
+This configuration file assumes that the Knuth node configuration file is located in `/root/data/kth-node.cfg` and the logs will be stored in `/root/data/log-bitprim-insight/log-.txt`
 
 For a detailed explanation on the configuration file, follow the [bitprim-insight readme](https://github.com/k-nuth/insight).
 

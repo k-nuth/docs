@@ -1,4 +1,4 @@
 apiRules:
   - exclude:
-      uidRegex: ^Bitprim\.Logging
+      uidRegex: ^Knuth\.Logging
       type: Namespace 

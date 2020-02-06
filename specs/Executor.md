@@ -1,5 +1,5 @@
 ---
-uid: Bitprim.Executor
+uid: Knuth.Executor
 remarks: '*This* is the entry point to use the bitprim node'
 ---
 
@@ -12,5 +12,5 @@ You can view an example [here](https://github.com/k-nuth/config)
 > If you pass an empty string, the node will use the default settings.
 >
 
-Then you need to start the executor with @Bitprim.Executor.InitAndRunAsync
+Then you need to start the executor with @Knuth.Executor.InitAndRunAsync
 
