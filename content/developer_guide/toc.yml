@@ -19,6 +19,6 @@
     - name: Installation
       href: dotnet/installation.md 
     - name: Reference
-      href: ../../obj/kth-cs/toc.yml
+      href: ../../obj/cs-api/toc.yml
     - name: Tutorials
       href: dotnet/tutorials/tutorials.md

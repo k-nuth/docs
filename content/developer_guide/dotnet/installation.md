@@ -63,7 +63,7 @@ Run the following commands:
 
 ```
 git clone https://github.com/k-nuth/cs.git
-cd kth-cs
+cd cs-api
 
 if you are on Windows, run:
 
