@@ -1,7 +1,7 @@
 # Simple Insight Installation
 *C# node + REST-API installation*
 
-**NOTE:** *The complete documentation is [here](https://bitprim.github.io/docfx/content/developer_guide/restapi/installation.html)*
+**NOTE:** *The complete documentation is [here](https://k-nuth.github.io/docfx/content/developer_guide/restapi/installation.html)*
 
 ## Before the installation:
 

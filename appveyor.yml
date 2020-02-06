@@ -49,12 +49,12 @@ build_script:
   - docfx
 
 on_success:
-  - git clone "https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
+  - git clone "https://%GIT_ACCESS_TOKEN%@github.com/bitprim/k-nuth.github.io.git"
   - git config --global user.email "ci@kth.cash"
-  - git config --global user.name "bitprim-ci"
+  - git config --global user.name "kth-ci"
   - cd _site
-  - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docs\ /s /e /y
-  - cd ../bitprim.github.io
+  - xcopy *.* C:\projects\bitprim-docs\k-nuth.github.io\docs\ /s /e /y
+  - cd ../k-nuth.github.io
   - git add .
   - git commit -m "Updated documentation site"
   - git push 

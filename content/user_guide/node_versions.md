@@ -16,6 +16,6 @@ The Bitprim node will download the complete chain and will allow the user to req
 
 The Bitprim node can be run using the C# implementation that will act like a full node, it will download and relay valid blocks and transactions and also it will set up a REST-API.
 
-Using this C# implementation is the easier way to request information to the blockchain, the complete list of commands can be found [here](https://bitprim.github.io/docfx/restapi/bitprim-api.html).
+Using this C# implementation is the easier way to request information to the blockchain, the complete list of commands can be found [here](https://k-nuth.github.io/docfx/restapi/bitprim-api.html).
 
 This REST-API also provides mechanisms to cache the more frequent requests to avoid spamming the node. 

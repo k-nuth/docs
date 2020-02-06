@@ -2,7 +2,7 @@
 
 This repository contains the Bitprim project's documentation.
 
-To read it online please go to <a href="https://bitprim.github.io/docs/index.html" target="_blank">https://bitprim.github.io/docs/index.html</a>
+To read it online please go to <a href="https://k-nuth.github.io/docs/index.html" target="_blank">https://k-nuth.github.io/docs/index.html</a>
 
 ## How to collaborate
 

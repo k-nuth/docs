@@ -40,8 +40,8 @@ When referencing bitprim-cs [via](https://www.nuget.org/packages/bitprim-bch) [N
 ## API basic usage
 
 Using bitprim-cs implies running a full bitprim node, so keep in mind that considerable storage space will be needed if connecting to mainnet.
-To control node execution, the [Executor class](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html) can be used. [Create an instance](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html#constructors), [initialize it](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_InitAndRunAsync), and once initialization succeeds, the 
-[Chain property] (https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_Chain) can be used to query the blockchain.
+To control node execution, the [Executor class](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Executor.html) can be used. [Create an instance](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Executor.html#constructors), [initialize it](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_InitAndRunAsync), and once initialization succeeds, the 
+[Chain property] (https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_Chain) can be used to query the blockchain.
 
 Example code:
 
@@ -70,14 +70,14 @@ Various sample config files for bitprim nodes are [publicly available in Github]
 Given a transaction hash, we want to be able to tell whether it's a Memo transaction or not. A Memo transaction uses
 OP_RETURN in at least one of its outputs, and that output's script will have the memo opcode. For example,
 transaction `4a69a310ce5cade43a12308101822dd9e2988f4be17c53c20785d7060688157d`.
-We can use the Chain class' [FetchTransactionAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchTransactionAsync_System_Byte___System_Boolean_) to check its contents:
+We can use the Chain class' [FetchTransactionAsync method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchTransactionAsync_System_Byte___System_Boolean_) to check its contents:
 
-If successful, the method will return an instance of the [Transaction class](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Transaction.html)
+If successful, the method will return an instance of the [Transaction class](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Transaction.html)
 which will contain all the transaction information. 
 
-A transaction contains [outputs](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Output.html), each of which has a [Script](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Script.html) object, representing the output's script.
+A transaction contains [outputs](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Output.html), each of which has a [Script](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Script.html) object, representing the output's script.
 If we look at the script from the second output (n=1) from the sample transaction,
-using the [ToString method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Script.html#Bitprim_Script_ToString_UInt32_):
+using the [ToString method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Script.html#Bitprim_Script_ToString_UInt32_):
 it's an OP_RETURN operation. Furthermore, take a look at the prefix codes: `return [6d0c] [6d656d6f]`.
 By reading the content of the square brackets as hex strings, we get `return [m\n] [memo]`. The first
 string between square brackets is what identifies this as a Memo transaction, according to the [Memo protocol](https://memo.cash/protocol).
@@ -87,12 +87,12 @@ Finally, if we decode the third hex string between square brackets, we get the M
 
 Now that we can tell if a transaction is Memo or not, we can use the bitprim-cs API to traverse the blockchain and scrape them.
 Suppose we want the N most recent posts. First, we need to know the current BCH blockchain height. This can be done using the
-[FetchLastHeightAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchLastHeightAsync).
+[FetchLastHeightAsync method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchLastHeightAsync).
 
-So, now that blockchain height is known, blocks and their transactions can be examined to search for Memo transactions. Given a block height, the block can be retrieved using the [FetchBlockByHeightAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchBlockByHeightAsync_UInt64_).
+So, now that blockchain height is known, blocks and their transactions can be examined to search for Memo transactions. Given a block height, the block can be retrieved using the [FetchBlockByHeightAsync method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_FetchBlockByHeightAsync_UInt64_).
 
-Given the block, its transactions can now be navigated using the [GetNthTransaction method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Block.html#Bitprim_Block_GetNthTransaction_UInt64_) and the
-[TransactionCount property](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Block.html#Bitprim_Block_TransactionCount).
+Given the block, its transactions can now be navigated using the [GetNthTransaction method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Block.html#Bitprim_Block_GetNthTransaction_UInt64_) and the
+[TransactionCount property](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Block.html#Bitprim_Block_TransactionCount).
 
 For example (omitting error handling for simplicity):
 
@@ -129,10 +129,10 @@ public async List<string> GetLatestPosts(int nPosts)
 As an optimization, using these same methods, it would be possible to scrape the whole blockchain from genesis to top to retrieve all Memo posts,
 save them to an external storage and cache them to avoid scraping every time. Then, it could be possible to modify the scraping code to start from
 a specific height, so as to periodically update, or monitor incoming blocks to detect Memo posts as soon as possible (see
-[SubscribeToBlockChain](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_SubscribeToBlockChain_Bitprim_Executor_BlockHandler_)). 
+[SubscribeToBlockChain](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Executor.html#Bitprim_Executor_SubscribeToBlockChain_Bitprim_Executor_BlockHandler_)). 
 
 ## 2. Making a Memo post
 
-To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [Transaction constructor](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Transaction.html#Bitprim_Transaction__ctor_UInt32_System_String_); for the transaction protocol version,
+To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [Transaction constructor](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Transaction.html#Bitprim_Transaction__ctor_UInt32_System_String_); for the transaction protocol version,
 1 is the recommended value. Once the transaction object is created, it can be handed to the 
- [OrganizeTransactionAsync method](https://bitprim.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_OrganizeTransactionAsync_Bitprim_Transaction_). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
+ [OrganizeTransactionAsync method](https://k-nuth.github.io/docfx/bitprim-cs/Bitprim.Chain.html#Bitprim_Chain_OrganizeTransactionAsync_Bitprim_Transaction_). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
