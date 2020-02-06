@@ -5,7 +5,7 @@
 
 Bitprim Insight uses two configuration files: one for the Insight-API and another for the Bitprim Node; each configuration file can be found in their respective section.
 
-For this example I'm going to create an **appsettings.json** file in the build folder **/root/bitprim-insight/bitprim.insight/** and a **bitprim-node.cfg** file in the folder **/root/data/**. The insight configuration file and bitcoin cash testnet configuration file will be used.
+For this example I'm going to create an **appsettings.json** file in the build folder **/root/bitprim-insight/bitprim.insight/** and a **kth-node.cfg** file in the folder **/root/data/**. The insight configuration file and bitcoin cash testnet configuration file will be used.
 
 ## Run Insight:
 ```

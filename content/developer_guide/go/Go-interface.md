@@ -10,7 +10,7 @@ It takes another programmer profile in order to tinker with the lower level inte
 
 ---
 
-See [the source in Github](https://github.com/bitprim/bitprim-go/tree/master/bitprim):
+See [the source in Github](https://github.com/k-nuth/go/tree/master/bitprim):
 
 * {entity}\_native.go: All of these together implement the 1-1 native interface. As usual, executor is the main entity which is used for manipulating the node.
 * {entity}.go: Together, all of these comprise the idiomatic interface. They define user defined types using the Go conventions that Go application programmers are familiar with and expect from a Go library/binding.
@@ -19,7 +19,7 @@ See [the source in Github](https://github.com/bitprim/bitprim-go/tree/master/bit
 
 ---
 
-One characteristic that sets Go apart from, say, Python, is the ease with which a Rest API can be created and tested from scratch. This is a very useful feature in today's web-centric world, and in order to make things even easier for Go developers, a Rest api is also offered in this interface. See [here](https://github.com/bitprim/bitprim-go/tree/master/rest-api) for an example of how to start an http server which hosts it and can be consumed from Postman, Curl or a browser and thus easily integrated into any web application.
+One characteristic that sets Go apart from, say, Python, is the ease with which a Rest API can be created and tested from scratch. This is a very useful feature in today's web-centric world, and in order to make things even easier for Go developers, a Rest api is also offered in this interface. See [here](https://github.com/k-nuth/go/tree/master/rest-api) for an example of how to start an http server which hosts it and can be consumed from Postman, Curl or a browser and thus easily integrated into any web application.
 
 
 

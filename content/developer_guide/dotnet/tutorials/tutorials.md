@@ -8,7 +8,7 @@ scraper consuming the API from a C# console application.
 Memo.cash is a Twitter-like social network built on top of the Bitcoin Cash Network. Posts are published as transactions with OP_RETURN
 output scripts using [Memo-specific prefix codes](https://memo.cash/protocol).
 
-The code for this tutorial is available in [Github](https://github.com/bitprim/bitprim-cs.git), in the `bitprim.tutorials` folder.
+The code for this tutorial is available in [Github](https://github.com/k-nuth/cs.git), in the `bitprim.tutorials` folder.
 
 ## Referencing bitprim-cs
 
@@ -20,7 +20,7 @@ In the sample code, in `bitprim.tutorials.csproj`, a project reference to bitpri
 </ItemGroup>
 ```
 
-When the API is referenced like this, it is necessary to manually copy the underlying native dll (libbitprim-nodecint.so or .dll) to the target dir.
+When the API is referenced like this, it is necessary to manually copy the underlying native dll (libkth-nodecint.so or .dll) to the target dir.
 We have provided a `.targets` file which performs that task. In `bitprim.tutorials.csproj`, that target is imported...
 
 ```
@@ -63,7 +63,7 @@ using (var executor = new Executor("bcc-mainnet.cfg"))
 
 The executor constructor requires a node configuration file; its values will depende on the coin (BCH/BTC/LTC), and the network (testnet/mainnet).
 For details on each field, see the [libbitcoin documentation](https://github.com/libbitcoin/libbitcoin-server/wiki/Log-Settings).
-Various sample config files for bitprim nodes are [publicly available in Github](https://github.com/bitprim/bitprim-config). 
+Various sample config files for bitprim nodes are [publicly available in Github](https://github.com/k-nuth/config). 
 
 ## 1. Identifying a Memo transaction
 

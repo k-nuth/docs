@@ -35,7 +35,7 @@ pip install conan
 
 * Add Bitprim's Conan remote
 ```
-conan remote add bitprim https://api.bintray.com/conan/bitprim/bitprim
+conan remote add kth https://api.bintray.com/conan/k-nuth/kth
 ```
 
 ### Build tools:

@@ -62,7 +62,7 @@ If you want to build from source, you need the following prerequisites:
 Run the following commands:
 
 ```
-git clone https://github.com/bitprim/bitprim-cs.git
+git clone https://github.com/k-nuth/cs.git
 cd bitprim-cs
 
 if you are on Windows, run:

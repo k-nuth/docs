@@ -10,7 +10,7 @@ It takes another programmer profile in order to tinker with the lower level inte
 
 ---
 
-See [the source in Github](https://github.com/bitprim/bitprim-py/tree/master):
+See [the source in Github](https://github.com/k-nuth/py/tree/master):
 
 * **bitprimmodule.c**: This is where the 1-1 native interface is implemented. C functions which can be called from Python are defined here, implementing all necessary marshalling.
 * **bitprim.py**: This is the idiomatic interface definition. Here, Python classes are defined and Python idioms and conventions offered to make life easier for the Python application programmer.
@@ -20,4 +20,4 @@ See [the source in Github](https://github.com/bitprim/bitprim-py/tree/master):
 
 ---
 
-Python interface documentation is available [here.](https://github.com/bitprim/bitprim-py/blob/master/doc/README.md)
+Python interface documentation is available [here.](https://github.com/k-nuth/py/blob/master/doc/README.md)

@@ -4,9 +4,9 @@
 
 Bitprim is a multi-coin node that supports Bitcoin Cash (BCH), Bitcoin Core (BTC) and Litecoin (LTC).  In order to download each chain the node needs to be compiled with different flags.
 
-Bitprim also has an interface written in C ([bitprim-node-cint](https://github.com/bitprim/bitprim-node-cint)) that allows the user to run the Bitprim node in any language if the wrapper is created. Actually the high level interfaces, which are complete, are the one written in C# ([bitprim-cs](https://github.com/bitprim/bitprim-cs)) and another written in Rust ([bitprim-rust](https://github.com/bitex-la/bitprim-rust)).
+Bitprim also has an interface written in C ([kth-node-cint](https://github.com/k-nuth/node-cint)) that allows the user to run the Bitprim node in any language if the wrapper is created. Actually the high level interfaces, which are complete, are the one written in C# ([bitprim-cs](https://github.com/k-nuth/cs)) and another written in Rust ([bitprim-rust](https://github.com/bitex-la/bitprim-rust)).
 
-The C# API was created by [Bitprim](https://kth.cash/) and its Insight API ([bitprim-insight](https://github.com/bitprim/bitprim-insight)) is running on top of this interface.
+The C# API was created by [Bitprim](https://kth.cash/) and its Insight API ([bitprim-insight](https://github.com/k-nuth/insight)) is running on top of this interface.
 
 The Rust API was created by [Bitex](https://bitex.la/), a Latin American Exchange.
 

@@ -15,7 +15,7 @@ conan remove "*" -f
 
 ### Clone the Bitprim-insight repository:
 ```
-git clone https://github.com/bitprim/bitprim-insight
+git clone https://github.com/k-nuth/insight
 ```
 
 ### Build the project:

@@ -13,7 +13,7 @@ For this tutorial, our use cases will be:
 1. Identifying a Memo transaction and scraping them from the BCH blockchain.
 2. Creating and publishing a Memo post.
 
-The code for this tutorial is available in [Github](https://github.com/bitprim/bitprim-insight.git), in the `bitprim.insight.tutorials` folder.
+The code for this tutorial is available in [Github](https://github.com/k-nuth/insight.git), in the `bitprim.insight.tutorials` folder.
 
 ## 1. Identifying a Memo transaction
 

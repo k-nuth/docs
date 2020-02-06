@@ -3,9 +3,9 @@
 
 ## Configuration file:
 
-This configuration file assumes that the Bitprim node configuration file is located in `/root/data/bitprim-node.cfg` and the logs will be stored in `/root/data/log-bitprim-insight/log-.txt`
+This configuration file assumes that the Bitprim node configuration file is located in `/root/data/kth-node.cfg` and the logs will be stored in `/root/data/log-bitprim-insight/log-.txt`
 
-For a detailed explanation on the configuration file, follow the [bitprim-insight readme](https://github.com/bitprim/bitprim-insight).
+For a detailed explanation on the configuration file, follow the [bitprim-insight readme](https://github.com/k-nuth/insight).
 
 ```
 {
@@ -20,7 +20,7 @@ For a detailed explanation on the configuration file, follow the [bitprim-insigh
   "LongResponseCacheDurationInSeconds": 86400,
   "MaxBlockSummarySize": 500,
   "MaxCacheSize": 50000,
-  "NodeConfigFile": "/root/data/bitprim-node.cfg",
+  "NodeConfigFile": "/root/data/kth-node.cfg",
   "NodeType": "bitprim node",
   "PoolsFile": "pools.json",
   "ProtocolVersion": "70013",

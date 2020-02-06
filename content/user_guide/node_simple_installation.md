@@ -17,21 +17,21 @@ conan remove "*" -f
 Install a node that will store all the blocks and will keep the UTXO set to validate the incoming p2p messages.
 
 ```
-conan install bitprim-node-exe/0.18.0@bitprim/stable -o db=default -o currency=BCH -o with_rpc=True
+conan install kth-node-exe/0.18.0@kth/stable -o db=default -o currency=BCH -o with_rpc=True
 ```
 
 ### Pruned mode:
 Install a node that will only store the last 100 blocks and the UTXO set.
 
 ```
-conan install bitprim-node-exe/0.18.0@bitprim/stable -o db=pruned -o currency=BCH -o with_rpc=True
+conan install kth-node-exe/0.18.0@kth/stable -o db=pruned -o currency=BCH -o with_rpc=True
 ```
 
 ### Full mode:
 Install a node with the complete blockchain plus the addresses and spent history databases.
 
 ```
-conan install bitprim-node-exe/0.18.0@bitprim/stable -o db=full -o currency=BCH -o with_rpc=True
+conan install kth-node-exe/0.18.0@kth/stable -o db=full -o currency=BCH -o with_rpc=True
 ```
 
 **NOTE:** *In Bitprim's version 0.18 the database engine was changed to LMDB, this allows the node to process the blockchain queries faster and makes the database more robust than the legacy Custom Memory File Map.*
