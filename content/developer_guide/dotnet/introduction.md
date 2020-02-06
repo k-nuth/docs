@@ -1,4 +1,4 @@
-Bitprim's .NET interface is built on top of Bitprim's C interface, in this fashion:
+Knuth's .NET interface is built on top of Knuth's C interface, in this fashion:
 
 ![](assets/dotnet_interface.png)
 
@@ -12,7 +12,7 @@ The platform invoke mechanism was chosen in order  to support as many operating 
 
 The api is fully written in C#.
 
-See [the source in Github](https://github.com/bitprim/bitprim-cs/tree/master):
+See [the source in Github](https://github.com/k-nuth/cs/tree/master):
 
 * **idiomatic classes**: Object oriented abstractions over Bitcoin concepts: Chain, Transaction, Block, Header, and so on. The Executor class is responsible for handling node execution.
 * **native classes**: These are all static classes, since each of these contains a set of DllImports of the native C functions.

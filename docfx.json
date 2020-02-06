@@ -3,12 +3,12 @@
     {
       "src": [
         {
-          "files": [ "bitprim-bch/*.csproj" ],
+          "files": [ "kth-bch/*.csproj" ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
-          "src": "bitprim-cs"
+          "src": "kth-cs"
         }
       ],
-      "dest": "obj/bitprim-cs",
+      "dest": "obj/kth-cs",
       "filter": "filterConfig.yml" 
     }
   ],
@@ -16,8 +16,8 @@
     "content": [
       {
         "files": [ "**/*.yml" ],
-        "src": "obj/bitprim-cs",
-        "dest": "bitprim-cs"
+        "src": "obj/kth-cs",
+        "dest": "kth-cs"
       },
       {
         "files": ["content/**/*.md" , 
@@ -36,9 +36,9 @@
     ],
     "overwrite": "specs/*.md",
     "globalMetadata": {
-      "_appTitle": "Bitprim Documentation Site",
+      "_appTitle": "Knuth Documentation Site",
       "_enableSearch": true, 
-      "_appFooter": "<span>Copyright © 2018 Bitprim</span>",
+      "_appFooter": "<span>Copyright © 2018 Knuth</span>",
       "_appLogoPath": "content/assets/b.png",
       "_gitContribute": {
         "branch": "master"
@@ -46,7 +46,7 @@
     },
     "template": [
       "default",
-      "templates/bitprim-template"
+      "templates/kth-template"
     ],
     "markdownEngineName": "markdig",
     "dest": "_site",

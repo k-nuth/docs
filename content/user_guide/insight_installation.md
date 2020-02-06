@@ -1,7 +1,7 @@
 # Simple Insight Installation
 *C# node + REST-API installation*
 
-**NOTE:** *The complete documentation is [here](https://bitprim.github.io/docfx/content/developer_guide/restapi/installation.html)*
+**NOTE:** *The complete documentation is [here](https://k-nuth.github.io/docfx/content/developer_guide/restapi/installation.html)*
 
 ## Before the installation:
 
@@ -13,14 +13,14 @@ conan remove "*" -f
 
 ## Installation:
 
-### Clone the Bitprim-insight repository:
+### Clone the Knuth-insight repository:
 ```
-git clone https://github.com/bitprim/bitprim-insight
+git clone https://github.com/k-nuth/insight
 ```
 
 ### Build the project:
 ```
-cd bitprim-insight/bitprim.insight
+cd kth-insight/kth.insight
 dotnet build /p:BCH=true -c Release -v normal
 ```
 

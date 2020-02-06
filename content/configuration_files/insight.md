@@ -1,11 +1,11 @@
 # Insight-API configuration file
-*Bitprim Insight configuration file.*
+*Knuth Insight configuration file.*
 
 ## Configuration file:
 
-This configuration file assumes that the Bitprim node configuration file is located in `/root/data/bitprim-node.cfg` and the logs will be stored in `/root/data/log-bitprim-insight/log-.txt`
+This configuration file assumes that the Knuth node configuration file is located in `/root/data/kth-node.cfg` and the logs will be stored in `/root/data/log-kth-insight/log-.txt`
 
-For a detailed explanation on the configuration file, follow the [bitprim-insight readme](https://github.com/bitprim/bitprim-insight).
+For a detailed explanation on the configuration file, follow the [kth-insight readme](https://github.com/k-nuth/insight).
 
 ```
 {
@@ -20,8 +20,8 @@ For a detailed explanation on the configuration file, follow the [bitprim-insigh
   "LongResponseCacheDurationInSeconds": 86400,
   "MaxBlockSummarySize": 500,
   "MaxCacheSize": 50000,
-  "NodeConfigFile": "/root/data/bitprim-node.cfg",
-  "NodeType": "bitprim node",
+  "NodeConfigFile": "/root/data/kth-node.cfg",
+  "NodeType": "kth node",
   "PoolsFile": "pools.json",
   "ProtocolVersion": "70013",
   "Proxy": "",
@@ -59,7 +59,7 @@ For a detailed explanation on the configuration file, follow the [bitprim-insigh
         "Name": "File",
         "Args":
         {
-           "path": "/root/data/log-bitprim-insight/log-.txt",
+           "path": "/root/data/log-kth-insight/log-.txt",
            "fileSizeLimitBytes": null,
            "retainedFileCountLimit" : 5, 
            "rollingInterval": "Day",

@@ -19,6 +19,6 @@
     - name: Installation
       href: dotnet/installation.md 
     - name: Reference
-      href: ../../obj/bitprim-cs/toc.yml
+      href: ../../obj/kth-cs/toc.yml
     - name: Tutorials
       href: dotnet/tutorials/tutorials.md

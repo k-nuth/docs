@@ -13,7 +13,7 @@ In case there are no pre-built binaries for your platform, conan will automatica
 
 ## Building Procedure
 
-The *Bitprim* libraries can be installed using conan (see below) on Linux, macOS, FreeBSD, Windows and others. These binaries are pre-built for the most usual operating system/compiler combinations and are downloaded from an online repository. If there are no pre-built binaries for your platform, conan will attempt to build from source during the installation.
+The *Knuth* libraries can be installed using conan (see below) on Linux, macOS, FreeBSD, Windows and others. These binaries are pre-built for the most usual operating system/compiler combinations and are downloaded from an online repository. If there are no pre-built binaries for your platform, conan will attempt to build from source during the installation.
 
 1. Build 
 
@@ -34,7 +34,7 @@ dotnet build /p:BTC=true -c Release -v normal
 2. Run
 
 ```
-dotnet bin/Release/netcoreapp2.0/bitprim.insight.dll --server.port=3000 --server.address=0.0.0.0
+dotnet bin/Release/netcoreapp2.0/kth.insight.dll --server.port=3000 --server.address=0.0.0.0
 ```
 
 or you can publish the app and run over the published folder 
@@ -44,7 +44,7 @@ dotnet publish /p:BTC=true -c Release -v normal -o published
 ```
 
 ```
-dotnet bin/Release/netcoreapp2.0/published/bitprim.insight.dll --server.port=3000 --server.address=0.0.0.0
+dotnet bin/Release/netcoreapp2.0/published/kth.insight.dll --server.port=3000 --server.address=0.0.0.0
 ```
 
 ### Command line arguments

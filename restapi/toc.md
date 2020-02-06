@@ -1,1 +1,1 @@
-﻿# [Bitprim Insight API](bitprim-api.json)
+﻿# [Knuth Insight API](kth-api.json)

@@ -1,4 +1,3 @@
-[submodule "bitprim-cs"]
-	path = bitprim-cs
-	url = https://github.com/bitprim/bitprim-cs
-	branch = master
+[submodule "cs-api"]
+	path = cs-api
+	url = https://github.com/k-nuth/cs-api.git

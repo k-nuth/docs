@@ -1,8 +1,8 @@
-Bitprim's C interface, the [bitprim-node-cint](https://github.com/bitprim/bitprim-node-cint) project, is built on top of the C++ interface. Asides from allowing a C library or program to consume all the Bitprim functionality, it can act as the base to create bindings for many current popular programming languages, such as Javascript, C\#,  Golang, Java and Python. All of these languages can interface easily with C, but not with C++.
+Knuth's C interface, the [kth-node-cint](https://github.com/k-nuth/node-cint) project, is built on top of the C++ interface. Asides from allowing a C library or program to consume all the Knuth functionality, it can act as the base to create bindings for many current popular programming languages, such as Javascript, C\#,  Golang, Java and Python. All of these languages can interface easily with C, but not with C++.
 
 Granted, the Object Oriented paradigm is lost when transitioning to C, but it can be "recovered" when implementing a binding in an object oriented language such as C\#. In such a context, classes can be built in order to give application programmers a friendlier interface for integrating Bitcoin in their projects, bridging the gap created by C/C++'s inherent complexity.
 
-Therefore, Bitprim's interface is not really meant to be consumed directly, but as the basis for a higher level binding in another language. To make this task easier, most functions will receive a parameter which will wrap the implicit object \(this\), so that OOP can be preserved in the binding if possible.
+Therefore, Knuth's interface is not really meant to be consumed directly, but as the basis for a higher level binding in another language. To make this task easier, most functions will receive a parameter which will wrap the implicit object \(this\), so that OOP can be preserved in the binding if possible.
 
 ## Resource management
 
@@ -14,7 +14,7 @@ To avoid memory leaks, all C functions which allocate memory that must be releas
 
 ---
 
-Since this is C we're dealing with, there is nothing beyond a set of functions and some user defined types, but there is [a structure](https://github.com/bitprim/bitprim-node-cint/tree/master/include/bitprim/nodecint) nevertheless. The main "entry point" for the interface are the functions from [executor\_c.h](https://github.com/bitprim/bitprim-node-cint/blob/master/include/bitprim/nodecint/executor_c.h) and the types defined in [primitives.h](https://github.com/bitprim/bitprim-node-cint/blob/master/include/bitprim/nodecint/primitives.h). To start consuming node functionality, the first step is calling one of these functions:
+Since this is C we're dealing with, there is nothing beyond a set of functions and some user defined types, but there is [a structure](https://github.com/k-nuth/node-cint/tree/master/include/kth/nodecint) nevertheless. The main "entry point" for the interface are the functions from [executor\_c.h](https://github.com/k-nuth/node-cint/blob/master/include/kth/nodecint/executor_c.h) and the types defined in [primitives.h](https://github.com/k-nuth/node-cint/blob/master/include/kth/nodecint/primitives.h). To start consuming node functionality, the first step is calling one of these functions:
 
 ```c
 executor_t executor_construct(char const* path, FILE* sout, FILE* serr);

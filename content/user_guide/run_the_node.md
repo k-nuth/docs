@@ -2,9 +2,9 @@
 *Initialize the databases and let the IBD run.*
 
 ## Choose your configuration file:
-The configuration files are listed on the [Bitprim Node Configuration Files](../configuration_files/bitcoincash_testnet.md) section.
+The configuration files are listed on the [Knuth Node Configuration Files](../configuration_files/bitcoincash_testnet.md) section.
 
-The configuration file will be passed to the Bitprim node using the argument `-c /path/to/file`
+The configuration file will be passed to the Knuth node using the argument `-c /path/to/file`
 
 For this example I'm going to use the one for the `Bitcoin Cash Testnet`. 
 
@@ -23,7 +23,7 @@ For this example I'm going to use the one for the `Bitcoin Cash Testnet`.
 * safe_mode: safe mode can be set to false, it changes the LMDB settings. With the safe_mode set to false, the node will download the blockchain faster but the database will lose durability in case of a system crash.
 
 ## Initialize the databases:
-In order to run the Bitprim node it's required to initialize the databases. Assuming that the configuration file is saved in the same directory that your Bitprim node:
+In order to run the Knuth node it's required to initialize the databases. Assuming that the configuration file is saved in the same directory that your Knuth node:
 
 ```
 ./bn -i -c config.cfg
@@ -69,7 +69,7 @@ This can be fixed manually populating the **host_file** with some peers and thei
 
 For example for `Bitcoin Cash Testnet`:
 ```
-nslookup testnet-seed.bitprim.org
+nslookup testnet-seed.kth.cash
 ```
 
 This will return:
@@ -79,7 +79,7 @@ Server:         127.0.0.1
 Address:        127.0.0.1#53
 
 Non-authoritative answer:
-Name:   testnet-seed.bitprim.org
+Name:   testnet-seed.kth.cash
 Address: 104.197.147.134
 ```
 

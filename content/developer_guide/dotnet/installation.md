@@ -12,12 +12,12 @@ In case there are no pre-built binaries for your platform, conan will automatica
 
 ## Installation
 
-You can install the Bitprim C# binding via Nuget.
+You can install the Knuth C# binding via Nuget.
 
 There are two packages available:
 
-For Bitcoin Cash (BCH) you need to use  https://www.nuget.org/packages/bitprim-bch/ 
-and for Bitcoin Legacy (BTC) you need to use https://www.nuget.org/packages/bitprim-btc/
+For Bitcoin Cash (BCH) you need to use  https://www.nuget.org/packages/kth-bch/ 
+and for Bitcoin Legacy (BTC) you need to use https://www.nuget.org/packages/kth-btc/
 
 If you use Visual Studio, you can use the UI or the Package Manager.
 
@@ -25,7 +25,7 @@ If you use Visual Studio, you can use the UI or the Package Manager.
 
  * Right click on your project
  * Select *Manage Nuget Packages*
- * Search for bitprim-bch or bitprim-btc
+ * Search for kth-bch or kth-btc
  * Click Install
 
 ### Package Manager
@@ -34,21 +34,21 @@ If you use Visual Studio, you can use the UI or the Package Manager.
     * Run the following command
 
 ```
-Install-Package bitprim-bch 
+Install-Package kth-bch 
 
 or
 
-Install-Package bitprim-btc 
+Install-Package kth-btc 
 ```
 
 If you are using dotnet cli:
 
 ```
-dotnet add package bitprim-bch 
+dotnet add package kth-bch 
 
 or
 
-dotnet add package bitprim-btc
+dotnet add package kth-btc
 ```
 
 ## Building from source
@@ -62,8 +62,8 @@ If you want to build from source, you need the following prerequisites:
 Run the following commands:
 
 ```
-git clone https://github.com/bitprim/bitprim-cs.git
-cd bitprim-cs
+git clone https://github.com/k-nuth/cs.git
+cd kth-cs
 
 if you are on Windows, run:
 

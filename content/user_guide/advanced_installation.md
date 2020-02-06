@@ -5,33 +5,33 @@
 
 ## Installation Procedure
 
-The *Bitprim* executables can be installed on Linux, macOS, FreeBSD, Windows and others. These binaries are pre-built for the most usual operating system/compiler combinations and hosted in an online repository. If there are no pre-built binaries for your platform, a build from source will be attempted.
+The *Knuth* executables can be installed on Linux, macOS, FreeBSD, Windows and others. These binaries are pre-built for the most usual operating system/compiler combinations and hosted in an online repository. If there are no pre-built binaries for your platform, a build from source will be attempted.
 
 So, for any platform, an installation can be performed in 2 simple steps:
 
 1. Configure the Conan remote
 ```
-conan remote add bitprim https://api.bintray.com/conan/bitprim/bitprim
+conan remote add kth https://api.bintray.com/conan/k-nuth/kth
 ```
 
 2. Install the appropriate executable
 
 ```
 # For Bitcoin Cash
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH
+conan install kth-node-exe/0.X@kth/stable -o currency=BCH
 # ... or (BCH is the default crypto)
-conan install bitprim-node-exe/0.X@bitprim/stable
+conan install kth-node-exe/0.X@kth/stable
 
 # For Bitcoin Legacy
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BTC
+conan install kth-node-exe/0.X@kth/stable -o currency=BTC
 
 # For Litecoin
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=LTC
+conan install kth-node-exe/0.X@kth/stable -o currency=LTC
 ```
 
 ### Database selection
 
-Bitprim includes three databases modes, adapted to different uses cases.
+Knuth includes three databases modes, adapted to different uses cases.
 
 - pruned
 - default
@@ -48,7 +48,7 @@ In this mode, the node only has the block headers and the UTXO. This mode is opt
 Eg.
 
 ```
-conan install bitprim-node-exe/0.X@bitprim/stable -o db=pruned
+conan install kth-node-exe/0.X@kth/stable -o db=pruned
 ```
 
 #### Default
@@ -59,11 +59,11 @@ In this mode, the node stores the full blocks and the UTXO. This is the most com
 Eg.
 
 ```
-conan install bitprim-node-exe/0.X@bitprim/stable -o db=default
+conan install kth-node-exe/0.X@kth/stable -o db=default
 
 or directly
 
-conan install bitprim-node-exe/0.X@bitprim/stable
+conan install kth-node-exe/0.X@kth/stable
 ```
 
 #### Full
@@ -79,7 +79,7 @@ This is the best mode for an Insight API node or if you want to use RPC to query
 Eg.
 
 ```
-conan install bitprim-node-exe/0.X@bitprim/stable -o db=full
+conan install kth-node-exe/0.X@kth/stable -o db=full
 ```
 
 ## Building from source Requirements
@@ -101,7 +101,7 @@ In order to run the full node, you have to initialize the database and then run 
 
 ```./bn```
 
-The above commands use the default configuration hardcoded in the executable. You can use a configuration file to customize the behavior of the node. In the [bitprim-config](https://github.com/bitprim/bitprim-config) repository you can find some example files.
+The above commands use the default configuration hardcoded in the executable. You can use a configuration file to customize the behavior of the node. In the [kth-config](https://github.com/k-nuth/config) repository you can find some example files.
 
 1. Initialize the database using a configuration file:
 
@@ -113,12 +113,12 @@ The above commands use the default configuration hardcoded in the executable. Yo
 
 ## Advanced Installation
 
-Bitprim is a high performance node, so we have some options and pre-built packages tuned for several platforms.
+Knuth is a high performance node, so we have some options and pre-built packages tuned for several platforms.
 Specifically, you can choose your computer _microarchitecture_ to download a pre-build executable compiled to take advantage of the instructions available in your processor. For example:
 
 ```
 # For Haswell microarchitecture and Bitcoin Cash currency
-conan install bitprim-node-exe/0.X@bitprim/stable -o currency=BCH -o microarchitecture=haswell
+conan install kth-node-exe/0.X@kth/stable -o currency=BCH -o microarchitecture=haswell
 ```
 So, you can manually choose the appropriate microarchitecture, some examples are: _x86_64_, _haswell_, _ivybridge_, _sandybridge_, _bulldozer_, ...  
 By default, if you do not specify any, the building system will select a base microarchitecture corresponding to your _Instruction Set Architecture_ (ISA). For example, for _Intel 80x86_, the x86_64 microarchitecture will be selected.
@@ -129,5 +129,5 @@ Our build system has the ability to automatically detect the microarchitecture o
 
 ```
 pip install cpuid
-conan install bitprim-node-exe/0.X@bitprim/stable
+conan install kth-node-exe/0.X@kth/stable
 ```
