@@ -1,4 +1,0 @@
-[submodule "bitprim-cs"]
-	path = bitprim-cs
-	url = https://github.com/bitprim/bitprim-cs
-	branch = master
