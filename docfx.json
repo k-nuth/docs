@@ -5,10 +5,10 @@
         {
           "files": [ "kth-bch/*.csproj" ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
-          "src": "kth-cs"
+          "src": "cs-api"
         }
       ],
-      "dest": "obj/kth-cs",
+      "dest": "obj/cs-api",
       "filter": "filterConfig.yml" 
     }
   ],
@@ -16,8 +16,8 @@
     "content": [
       {
         "files": [ "**/*.yml" ],
-        "src": "obj/kth-cs",
-        "dest": "kth-cs"
+        "src": "obj/cs-api",
+        "dest": "cs-api"
       },
       {
         "files": ["content/**/*.md" , 
