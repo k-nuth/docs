@@ -101,7 +101,7 @@ In order to run the full node, you have to initialize the database and then run 
 
 ```./bn```
 
-The above commands use the default configuration hardcoded in the executable. You can use a configuration file to customize the behavior of the node. In the [bitprim-config](https://github.com/k-nuth/config) repository you can find some example files.
+The above commands use the default configuration hardcoded in the executable. You can use a configuration file to customize the behavior of the node. In the [kth-config](https://github.com/k-nuth/config) repository you can find some example files.
 
 1. Initialize the database using a configuration file:
 

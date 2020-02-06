@@ -1,6 +1,6 @@
 ---
 uid: Knuth.Executor
-remarks: '*This* is the entry point to use the bitprim node'
+remarks: '*This* is the entry point to use the kth node'
 ---
 
 Before you can work with transactions, blocks and adresses, you need to instantiate an *Executor*.

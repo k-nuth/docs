@@ -21,7 +21,7 @@ Eg.
   "MaxCacheSize": 50000,
   "MaxSocketPublishRetries": 3,
   "NodeConfigFile": "config.cfg",
-  "NodeType": "bitprim node",
+  "NodeType": "kth node",
   "PoolsFile":  "pools.json", 
   "ProtocolVersion": "70015",
   "Proxy": "",
@@ -80,7 +80,7 @@ All the settings can be passed as command line arguments prefixing the name with
 Eg.
 
 ```
-dotnet bin/x64/Release/netcoreapp2.0/published/bitprim.insight.dll --server.port=3000 --server.address=0.0.0.0 --MaxBlockSummarySize=1000
+dotnet bin/x64/Release/netcoreapp2.0/published/kth.insight.dll --server.port=3000 --server.address=0.0.0.0 --MaxBlockSummarySize=1000
 ```
 
 
@@ -146,7 +146,7 @@ http://blockdozer.com/[ApiPrefix]/blocks/
 *Default value:""*
 
 **NodeType**: The value returned in *type* element by the /sync method.
-*Default value:bitprim node*
+*Default value:kth node*
 
 **PoolsFile**: Path to the json file with the mining pool information.
 *Default value:pools.json*

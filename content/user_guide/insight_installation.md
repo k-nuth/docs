@@ -20,7 +20,7 @@ git clone https://github.com/k-nuth/insight
 
 ### Build the project:
 ```
-cd bitprim-insight/bitprim.insight
+cd kth-insight/kth.insight
 dotnet build /p:BCH=true -c Release -v normal
 ```
 

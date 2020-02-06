@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As an example of what can be achieved with the bitprim-insight Rest API, we'll show how to implement a [Memo.cash](https://memo.cash/)
+As an example of what can be achieved with the kth-insight Rest API, we'll show how to implement a [Memo.cash](https://memo.cash/)
 explorer consuming the API from a C# console application.
 
 Memo.cash is a Twitter-like social network built on top of the Bitcoin Cash Network. Posts are published as transactions with OP_RETURN
@@ -13,13 +13,13 @@ For this tutorial, our use cases will be:
 1. Identifying a Memo transaction and scraping them from the BCH blockchain.
 2. Creating and publishing a Memo post.
 
-The code for this tutorial is available in [Github](https://github.com/k-nuth/insight.git), in the `bitprim.insight.tutorials` folder.
+The code for this tutorial is available in [Github](https://github.com/k-nuth/insight.git), in the `kth.insight.tutorials` folder.
 
 ## 1. Identifying a Memo transaction
 
 Given a transaction hash, we want to be able to tell whether it's a Memo transaction or not. A Memo transaction uses
 OP_RETURN in at least one of its outputs, and that output's script will have the memo opcode. For example,
-transaction `4a69a310ce5cade43a12308101822dd9e2988f4be17c53c20785d7060688157d`. If we use the bitprim insight API [GetTransactionByHash method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetTransactionByHash) to check its contents:
+transaction `4a69a310ce5cade43a12308101822dd9e2988f4be17c53c20785d7060688157d`. If we use the kth insight API [GetTransactionByHash method](https://k-nuth.github.io/docfx/restapi/kth-api.html#kth_v1_GetTransactionByHash) to check its contents:
 
 `https://blockdozer.com/api/tx/4a69a310ce5cade43a12308101822dd9e2988f4be17c53c20785d7060688157d`
 
@@ -96,7 +96,7 @@ Finally, if we decode the third hex string between square brackets, we get the M
 ### Reading the N most recent Memo posts
 
 Now that we can tell if a transaction is Memo or not, we can use the Knuth API to traverse the blockchain and scrape them.
-Suppose we want the N most recent posts. First, we need to know the current BCH blockchain height. This can be done using the [GetSyncStatus method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetSyncStatus). A sample output of this command would look this way:
+Suppose we want the N most recent posts. First, we need to know the current BCH blockchain height. This can be done using the [GetSyncStatus method](https://k-nuth.github.io/docfx/restapi/kth-api.html#kth_v1_GetSyncStatus). A sample output of this command would look this way:
 
 ```
 {
@@ -105,10 +105,10 @@ Suppose we want the N most recent posts. First, we need to know the current BCH 
   "syncPercentage": "100.00",
   "error": null,
   "height": 539383,
-  "type": "bitprim node"
+  "type": "kth node"
 }
 ```
-The field of interest is `blockChainHeight` (which matches `height`, because the node is currently at the top of the blockchain). So, now that blockchain height is known, blocks and their transactions can be examined to search for Memo transactions. Given a block height, the block hash can be retrieved using the [GetBlockByHeight method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetBlockByHeight). This will yield the block hash; for 539383, it would be:
+The field of interest is `blockChainHeight` (which matches `height`, because the node is currently at the top of the blockchain). So, now that blockchain height is known, blocks and their transactions can be examined to search for Memo transactions. Given a block height, the block hash can be retrieved using the [GetBlockByHeight method](https://k-nuth.github.io/docfx/restapi/kth-api.html#kth_v1_GetBlockByHeight). This will yield the block hash; for 539383, it would be:
 
 ```
 {
@@ -116,7 +116,7 @@ The field of interest is `blockChainHeight` (which matches `height`, because the
 }
 ```
 
-With the block hash, its transactions can now be navigated using the [GetTransactions method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_GetTransactions), supplying only the `block` parameter (i.e. the transaction source will be a block hash). The output will have this structure:
+With the block hash, its transactions can now be navigated using the [GetTransactions method](https://k-nuth.github.io/docfx/restapi/kth-api.html#kth_v1_GetTransactions), supplying only the `block` parameter (i.e. the transaction source will be a block hash). The output will have this structure:
 
 ```
 {
@@ -135,4 +135,4 @@ a specific height, so as to periodically update, or monitor incoming blocks to d
 
 ## 2. Making a Memo post
 
-To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [BroadcastTransaction method](https://k-nuth.github.io/docfx/restapi/bitprim-api.html#bitprim_v1_BroadcastTransaction). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.
+To make a post, a transaction must be created with an OP_RETURN output script with the Memo prefix. Once the transaction is created, its hex representation can be handed to the [BroadcastTransaction method](https://k-nuth.github.io/docfx/restapi/kth-api.html#kth_v1_BroadcastTransaction). This will send the transaction to the BCH blockchain, where it should eventually become part of a mined block and permanently added to the blockchain. After a certain time, it should be visible as a new Memo transaction.

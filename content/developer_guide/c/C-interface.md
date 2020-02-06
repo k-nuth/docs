@@ -14,7 +14,7 @@ To avoid memory leaks, all C functions which allocate memory that must be releas
 
 ---
 
-Since this is C we're dealing with, there is nothing beyond a set of functions and some user defined types, but there is [a structure](https://github.com/k-nuth/node-cint/tree/master/include/bitprim/nodecint) nevertheless. The main "entry point" for the interface are the functions from [executor\_c.h](https://github.com/k-nuth/node-cint/blob/master/include/bitprim/nodecint/executor_c.h) and the types defined in [primitives.h](https://github.com/k-nuth/node-cint/blob/master/include/bitprim/nodecint/primitives.h). To start consuming node functionality, the first step is calling one of these functions:
+Since this is C we're dealing with, there is nothing beyond a set of functions and some user defined types, but there is [a structure](https://github.com/k-nuth/node-cint/tree/master/include/kth/nodecint) nevertheless. The main "entry point" for the interface are the functions from [executor\_c.h](https://github.com/k-nuth/node-cint/blob/master/include/kth/nodecint/executor_c.h) and the types defined in [primitives.h](https://github.com/k-nuth/node-cint/blob/master/include/kth/nodecint/primitives.h). To start consuming node functionality, the first step is calling one of these functions:
 
 ```c
 executor_t executor_construct(char const* path, FILE* sout, FILE* serr);

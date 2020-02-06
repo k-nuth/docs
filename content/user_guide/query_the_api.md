@@ -16,4 +16,4 @@ curl http://0.0.0.0:3000/api/block-index/0
 
 ## Complete API List:
 
-Check the [official documentation](https://k-nuth.github.io/docfx/restapi/bitprim-api.html) for a detailed explanation for each API call.
+Check the [official documentation](https://k-nuth.github.io/docfx/restapi/kth-api.html) for a detailed explanation for each API call.

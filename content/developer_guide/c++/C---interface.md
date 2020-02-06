@@ -6,7 +6,7 @@ Knuth's C++ interface is the base layer of the platform, the lowest abstraction 
 
 If we were to view the Knuth projects as UML packages, their dependencies would look like this \(some projects omitted for simplicity\):
 
-## ![](assets/bitprim_package_diagram.png)Which is the main responsibility/functionality for each package?
+## ![](assets/kth_package_diagram.png)Which is the main responsibility/functionality for each package?
 
 ---
 
@@ -31,5 +31,5 @@ For example, for [kth-node](https://github.com/k-nuth/node):
 
 ![](assets/2017-06-28-010906_1920x1080_scrot.png)
 
-There's a constructor which receives a configuration object \(see [configuration.hpp](https://github.com/k-nuth/node/blob/master/include/bitcoin/node/configuration.hpp)\), a destructor, and more interestingly, functions for starting, running, stopping and closing the node. Some have callbacks \(start and run\), which the user will have to implement to handle the associated events asynchronously. Examples of how to do this can be seen in Knuth projects which use the node package: [bitprim-client](https://github.com/k-nuth/client) and [bitprim-server](https://github.com/k-nuth/server).
+There's a constructor which receives a configuration object \(see [configuration.hpp](https://github.com/k-nuth/node/blob/master/include/bitcoin/node/configuration.hpp)\), a destructor, and more interestingly, functions for starting, running, stopping and closing the node. Some have callbacks \(start and run\), which the user will have to implement to handle the associated events asynchronously. Examples of how to do this can be seen in Knuth projects which use the node package: [kth-client](https://github.com/k-nuth/client) and [kth-server](https://github.com/k-nuth/server).
 

@@ -10,7 +10,7 @@ It takes another programmer profile in order to tinker with the lower level inte
 
 ---
 
-See [the source in Github](https://github.com/k-nuth/go/tree/master/bitprim):
+See [the source in Github](https://github.com/k-nuth/go/tree/master/kth):
 
 * {entity}\_native.go: All of these together implement the 1-1 native interface. As usual, executor is the main entity which is used for manipulating the node.
 * {entity}.go: Together, all of these comprise the idiomatic interface. They define user defined types using the Go conventions that Go application programmers are familiar with and expect from a Go library/binding.

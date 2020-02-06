@@ -1,4 +1,4 @@
-![Knuth](content/assets/bitprim_logo_orange.png)
+![Knuth](content/assets/kth_logo_orange.png)
 
 ##### "Bringing decentralized solutions to everyday life"
 
@@ -8,8 +8,8 @@ Knuth is a multi-coin developing platform, working with multi-languages programm
 
 Download:
 
-* Github: [https://github.com/bitprim](https://github.com/bitprim)
-* Slack: bitprim.slack.com 
+* Github: [https://github.com/k-nuth](https://github.com/k-nuth)
+* Slack: k-nuth.slack.com 
 * Email: info@kth.cash
 
 The platform includes:

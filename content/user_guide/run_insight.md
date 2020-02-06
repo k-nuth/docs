@@ -5,12 +5,12 @@
 
 Knuth Insight uses two configuration files: one for the Insight-API and another for the Knuth Node; each configuration file can be found in their respective section.
 
-For this example I'm going to create an **appsettings.json** file in the build folder **/root/bitprim-insight/bitprim.insight/** and a **kth-node.cfg** file in the folder **/root/data/**. The insight configuration file and bitcoin cash testnet configuration file will be used.
+For this example I'm going to create an **appsettings.json** file in the build folder **/root/kth-insight/kth.insight/** and a **kth-node.cfg** file in the folder **/root/data/**. The insight configuration file and bitcoin cash testnet configuration file will be used.
 
 ## Run Insight:
 ```
-cd bitprim-insight/bitprim.insight
-dotnet bin/Release/netcoreapp2.0/bitprim.insight.dll --server.port=3000 --server.address=0.0.0.0
+cd kth-insight/kth.insight
+dotnet bin/Release/netcoreapp2.0/kth.insight.dll --server.port=3000 --server.address=0.0.0.0
 ```
 
 ## Known problems:
