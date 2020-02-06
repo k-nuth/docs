@@ -1,0 +1,3 @@
+[submodule "cs-api"]
+	path = cs-api
+	url = https://github.com/k-nuth/cs-api.git
