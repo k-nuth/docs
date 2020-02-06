@@ -50,7 +50,7 @@ build_script:
 
 on_success:
   - git clone "https://%GIT_ACCESS_TOKEN%@github.com/bitprim/bitprim.github.io.git"
-  - git config --global user.email "ci@bitprim.org"
+  - git config --global user.email "ci@kth.cash"
   - git config --global user.name "bitprim-ci"
   - cd _site
   - xcopy *.* C:\projects\bitprim-docs\bitprim.github.io\docs\ /s /e /y

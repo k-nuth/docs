@@ -22,5 +22,5 @@
 
 * **Sergio Suchockas - Operations Manager**
 
-We are open for contibutors and looking for full time developers, feel free to contact us at info@bitprim.org
+We are open for contibutors and looking for full time developers, feel free to contact us at info@kth.cash
 

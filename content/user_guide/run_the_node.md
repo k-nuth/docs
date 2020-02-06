@@ -69,7 +69,7 @@ This can be fixed manually populating the **host_file** with some peers and thei
 
 For example for `Bitcoin Cash Testnet`:
 ```
-nslookup testnet-seed.bitprim.org
+nslookup testnet-seed.kth.cash
 ```
 
 This will return:
@@ -79,7 +79,7 @@ Server:         127.0.0.1
 Address:        127.0.0.1#53
 
 Non-authoritative answer:
-Name:   testnet-seed.bitprim.org
+Name:   testnet-seed.kth.cash
 Address: 104.197.147.134
 ```
 

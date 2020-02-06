@@ -10,7 +10,7 @@ Download:
 
 * Github: [https://github.com/bitprim](https://github.com/bitprim)
 * Slack: bitprim.slack.com 
-* Email: info@bitprim.org
+* Email: info@kth.cash
 
 The platform includes:
 
